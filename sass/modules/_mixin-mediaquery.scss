@@ -1,15 +1,15 @@
 @mixin mediaquery_phone {
-    @media all and (min-width: $width--phone) {
+    @media all and (max-width: $width--phone) {
         @content;
     }
 }
 @mixin mediaquery_minipad {
-    @media all and (min-width: $width--minipad) {
+    @media all and (min-width: $width--ipad) {
         @content;
     }
 }
 @mixin mediaquery_pad {
-    @media all and (min-width: $width--pad) {
+    @media all and (min-width: $width--ipadpro) {
         @content;
     }
 }

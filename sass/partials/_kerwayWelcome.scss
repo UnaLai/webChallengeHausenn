@@ -1,0 +1,84 @@
+
+@import './modules/normalize.scss';
+@import '../modules/variables.scss';
+@import './modules/mixin-mediaquery.scss';
+
+.menu{
+  height: 300px;
+  background-color: #000;
+}
+img{
+  display: block;
+}
+a{
+  cursor: pointer;
+}
+.kerwayWelcome{
+  width: 100vw;
+  position: relative;
+}
+.kerwayPhotoBg{
+  background: url(../images/kerway/header_photo_background.png)  center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding-bottom: 100vh
+}
+.kerwayLogo::before,.kerwayLogo::after{
+  content: "";
+  display: block;
+  width: 175px;
+  height: 1px;
+  overflow: hidden;
+  background: #fff;
+  position: absolute;
+  bottom: 50%;
+  @include mediaquery_phone{
+    display: none;
+  }
+}
+.kerwayLogo::before{
+  left: 250px;
+}
+.kerwayLogo::after{
+  right: 250px;
+}
+.kerwayLogo img{
+  // width: 37.335%;
+  width: 50vw;
+  max-width: 510px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  @include mediaquery_phone{
+    width: 80vw;
+  }
+}
+.goToContactUs img{
+  width: 100px;
+  height: 164px;
+  position: fixed;
+  right: 0;
+  bottom: 50%;
+  margin: auto;
+  @include mediaquery_phone{
+    display: none;
+  }
+}
+.arrow img{
+  width: 24px;
+  height: 34px;
+  position: absolute;
+  bottom: 72px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  animation: upDown 1s infinite;
+}
+@keyframes upDown{
+0% { transform:translateY(0px);}
+50% {transform:translateY(10px);}
+100% {transform:translateY(0px);}
+}

@@ -1,0 +1,255 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  height: 300px;
+  background-color: #000;
+}
+
+img {
+  display: block;
+}
+
+a {
+  cursor: pointer;
+}
+
+.kerwayWelcome {
+  width: 100vw;
+  position: relative;
+}
+
+.kerwayPhotoBg {
+  background: url(../images/kerway/header_photo_background.png) center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding-bottom: 100vh;
+}
+
+.kerwayLogo::before, .kerwayLogo::after {
+  content: "";
+  display: block;
+  width: 175px;
+  height: 1px;
+  overflow: hidden;
+  background: #fff;
+  position: absolute;
+  bottom: 50%;
+}
+@media all and (max-width: 375px) {
+  .kerwayLogo::before, .kerwayLogo::after {
+    display: none;
+  }
+}
+
+.kerwayLogo::before {
+  left: 250px;
+}
+
+.kerwayLogo::after {
+  right: 250px;
+}
+
+.kerwayLogo img {
+  width: 50vw;
+  max-width: 510px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+@media all and (max-width: 375px) {
+  .kerwayLogo img {
+    width: 80vw;
+  }
+}
+
+.goToContactUs img {
+  width: 100px;
+  height: 164px;
+  position: fixed;
+  right: 0;
+  bottom: 50%;
+  margin: auto;
+}
+@media all and (max-width: 375px) {
+  .goToContactUs img {
+    display: none;
+  }
+}
+
+.arrow img {
+  width: 24px;
+  height: 34px;
+  position: absolute;
+  bottom: 72px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  animation: upDown 1s infinite;
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.menu .menuNav, .menu .menuNavTop__mainBrand, .menu .menuNavTop__subBrand, .menu .menuNavMiddle a img, .menu .menuNavBottom__socialMedia {
+  transform: translateX(-590px);
+}
+
+.menu.appear, .menu.appear .menuNav, .menu.appear .menuNavTop__mainBrand, .menu.appear .menuNavTop__subBrand, .menu.appear .menuNavMiddle a img, .menu.appear .menuNavBottom .menuNavBottom__socialMedia {
+  transform: translateX(0);
+}
+
+.menu {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+.menu a {
+  position: relative;
+  color: #fff;
+}
+.menu a:hover img, .menu a:hover i {
+  opacity: .6;
+  transition: opacity .2s;
+}
+.menu .menuNav {
+  width: 590px;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 50px 90px 125px 145px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media all and (min-width: 768px) {
+  .menu .menuNav {
+    width: 100%;
+    height: 100%;
+    padding: 50px 15px;
+  }
+}
+.menu .menuNavTop {
+  display: flex;
+  flex-direction: column;
+  font-size: 0;
+}
+.menu .menuNavTop a + a {
+  padding-left: 32px;
+}
+.menu .menuNavTop a + a:before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background: #fff;
+  left: 15px;
+}
+.menu .menuNavTop img {
+  height: auto;
+}
+.menu img {
+  max-width: 100%;
+  height: 100%;
+}
+.menu .menuNavTop__housennCamp {
+  display: block;
+  max-width: 47%;
+  margin-bottom: 15px;
+}
+.menu .menuNavTop__brandLink img:nth-child(2) {
+  display: none;
+  position: absolute;
+  height: 70%;
+  top: 150%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.menu .menuNavTop__brandLink:hover img:nth-child(2) {
+  display: block;
+}
+.menu .menuNavTop__brandLink + a img:nth-child(2) {
+  padding-left: 30px;
+}
+.menu .menuNavTop__mainBrand {
+  transition: transform .2s 0s;
+}
+.menu .menuNavTop__subBrand {
+  display: flex;
+  align-items: flex-end;
+  transition: transform .2s .1s;
+}
+.menu .menuNavMiddle a {
+  display: block;
+  height: 40px;
+}
+.menu .menuNavMiddle a:nth-child(1) img {
+  transition: transform .2s .2s;
+}
+.menu .menuNavMiddle a:nth-child(2) img {
+  transition: transform .2s .3s;
+}
+.menu .menuNavMiddle a:nth-child(3) img {
+  transition: transform .2s .4s;
+}
+@media all and (min-width: 768px) {
+  .menu .menuNavMiddle a {
+    height: 30px;
+  }
+}
+.menu .menuNavMiddle a + a {
+  margin-top: 55px;
+}
+@media all and (min-width: 768px) {
+  .menu .menuNavMiddle a + a {
+    margin-top: 25px;
+  }
+}
+.menu .menuNavMiddle .menuNavMiddle__contactLink {
+  display: none;
+}
+@media all and (min-width: 768px) {
+  .menu .menuNavMiddle .menuNavMiddle__contactLink {
+    display: block;
+  }
+}
+.menu .menuNavBottom a {
+  font-size: 1.2rem;
+}
+.menu .menuNavBottom a + a {
+  padding-left: 10px;
+}
+.menu .menuNavBottom:nth-child(2) {
+  padding: 0 2px 0 12px;
+}
+.menu .menuNavBottom__socialMedia {
+  padding-left: 10px;
+  transition: transform .2s .4s;
+}
