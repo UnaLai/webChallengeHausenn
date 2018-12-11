@@ -1,17 +1,17 @@
 %container--fixed{
   width: 100%;
   margin: 0 auto;
-  max-width: 1100px;
-  // @include mediaquery_phone{
-  //   max-width: $width--phone;
-  // }
-  // @include mediaquery_minipad{
-  //   max-width: $width--minipad;
-  // }
-  // @include mediaquery_pad{
-  //   max-width: $width--pad;
-  // }
-  // @include mediaquery_pc{
-  //   max-width: $width--pc;
-  // }
+  max-width: 100%;
+  @include mediaquery_phone{
+    max-width: $width--phone * 0.95;
+  }
+  @include mediaquery_minipad{
+    max-width: $width--minipad * 0.8;
+  }
+  @include mediaquery_pad{
+    max-width: $width--pad * 0.8;
+  }
+  @include mediaquery_pc{
+    max-width: $width--pc * 0.8;
+  }
 }
