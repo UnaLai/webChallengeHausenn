@@ -17,11 +17,6 @@ body {
   padding: 0;
 }
 
-.menu {
-  height: 300px;
-  background-color: #000;
-}
-
 img {
   display: block;
 }
@@ -127,9 +122,10 @@ a {
 }
 
 .menu {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
+  width: 0;
+  height: 0;
+  position: fixed;
+  top: 0;
 }
 .menu a {
   position: relative;
@@ -139,20 +135,83 @@ a {
   opacity: .6;
   transition: opacity .2s;
 }
+.menu .menuIconBox {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  width: 39px;
+  height: 19px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  transition: background-color 800ms ease-in;
+  cursor: pointer;
+  z-index: 10;
+}
+@media all and (max-width: 768px) {
+  .menu .menuIconBox {
+    top: 25px;
+    left: 25px;
+  }
+}
+.menu .menuIcon {
+  width: 17px;
+  height: 3px;
+  background-color: #fff;
+  transition: transform 500ms ease-in,background-color 500ms ease-in;
+}
+.menu .menuIcon::before, .menu .menuIcon::after {
+  content: '';
+  width: 17px;
+  height: 3px;
+  background: #fff;
+  position: absolute;
+}
+.menu .menuIcon::before {
+  top: 0;
+}
+.menu .menuIcon::after {
+  bottom: 0;
+}
+.menu.appear {
+  width: 100vw;
+  height: 100vh;
+}
+.menu.appear .menuIconBox {
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+.menu.appear .menuIcon {
+  width: 20px;
+  height: 2px;
+  position: absolute;
+  top: 9px;
+}
+.menu.appear .menuIcon:first-child {
+  transform: rotate(45deg);
+}
+.menu.appear .menuIcon:last-child {
+  transform: rotate(-45deg);
+}
+.menu.appear .menuIcon::before, .menu.appear .menuIcon::after {
+  content: none;
+}
 .menu .menuNav {
   width: 590px;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.8);
   padding: 50px 90px 125px 145px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-@media all and (min-width: 768px) {
+@media all and (max-width: 768px) {
   .menu .menuNav {
     width: 100%;
     height: 100%;
-    padding: 50px 15px;
+    padding: 80px 20px 50px;
   }
 }
 .menu .menuNavTop {
@@ -219,25 +278,25 @@ a {
 .menu .menuNavMiddle a:nth-child(3) img {
   transition: transform .2s .4s;
 }
-@media all and (min-width: 768px) {
+@media all and (max-width: 768px) {
   .menu .menuNavMiddle a {
-    height: 30px;
+    height: 35px;
   }
 }
 .menu .menuNavMiddle a + a {
-  margin-top: 55px;
+  margin-top: 48px;
 }
-@media all and (min-width: 768px) {
+@media all and (max-width: 768px) {
   .menu .menuNavMiddle a + a {
-    margin-top: 25px;
+    margin: 40px 0;
   }
 }
 .menu .menuNavMiddle .menuNavMiddle__contactLink {
-  display: none;
+  visibility: hidden;
 }
-@media all and (min-width: 768px) {
+@media all and (max-width: 768px) {
   .menu .menuNavMiddle .menuNavMiddle__contactLink {
-    display: block;
+    visibility: visible;
   }
 }
 .menu .menuNavBottom a {
@@ -250,6 +309,5 @@ a {
   padding: 0 2px 0 12px;
 }
 .menu .menuNavBottom__socialMedia {
-  padding-left: 10px;
   transition: transform .2s .4s;
 }

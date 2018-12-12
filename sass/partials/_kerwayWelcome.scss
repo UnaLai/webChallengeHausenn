@@ -1,12 +1,8 @@
 
-@import './modules/normalize.scss';
-@import '../modules/variables.scss';
-@import './modules/mixin-mediaquery.scss';
+@import '../modules/variablesWidth';
+@import '../modules/mixinMediaquery';
 
-.menu{
-  height: 300px;
-  background-color: #000;
-}
+
 img{
   display: block;
 }

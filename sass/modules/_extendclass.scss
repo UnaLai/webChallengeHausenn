@@ -15,3 +15,10 @@
     max-width: $width--pc * 0.8;
   }
 }
+
+%menuHide {
+  transform: translateX(-590px);
+}
+%menuAppear {
+  transform: translateX(0);
+}

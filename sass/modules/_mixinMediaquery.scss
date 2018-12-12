@@ -4,17 +4,17 @@
     }
 }
 @mixin mediaquery_minipad {
-    @media all and (min-width: $width--ipad) {
+    @media all and (max-width: $width--ipad) {
         @content;
     }
 }
 @mixin mediaquery_pad {
-    @media all and (min-width: $width--ipadpro) {
+    @media all and (max-width: $width--ipadpro) {
         @content;
     }
 }
 @mixin mediaquery_pc{
-    @media all and (min-width: $width--pc){
+    @media all and (max-width: $width--pc){
         @content;
     }
 }
