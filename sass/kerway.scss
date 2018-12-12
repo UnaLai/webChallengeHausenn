@@ -1,3 +1,6 @@
 // background: image-url(logo.png);
-@import './partials/kerwayWelcome.scss';
-@import './partials/menu.scss';
+
+@import './modules/variablesWidth';
+@import './partials/normalize';
+@import './partials/kerwayWelcome';
+@import './partials/menu';
