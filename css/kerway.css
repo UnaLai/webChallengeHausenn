@@ -28,6 +28,14 @@ a {
 .kerwayWelcome {
   width: 100vw;
   position: relative;
+  left: 0;
+}
+.kerwayWelcome.appear {
+  left: -100vw;
+  transition-property: left;
+  transition-duration: .3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 0.54);
+  transition-delay: 0s;
 }
 
 .kerwayPhotoBg {
@@ -77,13 +85,16 @@ a {
   }
 }
 
-.goToContactUs img {
-  width: 100px;
-  height: 164px;
+.goToContactUs {
   position: fixed;
   right: 0;
   bottom: 50%;
   margin: auto;
+  cursor: pointer;
+}
+.goToContactUs img {
+  width: 100px;
+  height: 164px;
 }
 @media all and (max-width: 375px) {
   .goToContactUs img {
@@ -117,7 +128,7 @@ a {
   transform: translateX(-590px);
 }
 
-.menu.appear, .menu.appear .menuNav, .menu.appear .menuNavTop__mainBrand, .menu.appear .menuNavTop__subBrand, .menu.appear .menuNavMiddle a img, .menu.appear .menuNavBottom .menuNavBottom__socialMedia {
+.menu.menuAppear, .menu.menuAppear .menuNav, .menu.menuAppear .menuNavTop__mainBrand, .menu.menuAppear .menuNavTop__subBrand, .menu.menuAppear .menuNavMiddle a img, .menu.menuAppear .menuNavBottom .menuNavBottom__socialMedia {
   transform: translateX(0);
 }
 
@@ -126,6 +137,7 @@ a {
   height: 0;
   position: fixed;
   top: 0;
+  z-index: 2;
 }
 .menu a {
   position: relative;
@@ -135,68 +147,10 @@ a {
   opacity: .6;
   transition: opacity .2s;
 }
-.menu .menuIconBox {
-  position: absolute;
-  left: 50px;
-  top: 50px;
-  width: 39px;
-  height: 19px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  transition: background-color 800ms ease-in;
-  cursor: pointer;
-  z-index: 10;
-}
-@media all and (max-width: 768px) {
-  .menu .menuIconBox {
-    top: 25px;
-    left: 25px;
-  }
-}
-.menu .menuIcon {
-  width: 17px;
-  height: 3px;
-  background-color: #fff;
-  transition: transform 500ms ease-in,background-color 500ms ease-in;
-}
-.menu .menuIcon::before, .menu .menuIcon::after {
-  content: '';
-  width: 17px;
-  height: 3px;
-  background: #fff;
-  position: absolute;
-}
-.menu .menuIcon::before {
-  top: 0;
-}
-.menu .menuIcon::after {
-  bottom: 0;
-}
-.menu.appear {
+.menu.menuAppear {
   width: 100vw;
   height: 100vh;
-}
-.menu.appear .menuIconBox {
-  display: block;
-  height: 20px;
-  width: 20px;
-}
-.menu.appear .menuIcon {
-  width: 20px;
-  height: 2px;
-  position: absolute;
-  top: 9px;
-}
-.menu.appear .menuIcon:first-child {
-  transform: rotate(45deg);
-}
-.menu.appear .menuIcon:last-child {
-  transform: rotate(-45deg);
-}
-.menu.appear .menuIcon::before, .menu.appear .menuIcon::after {
-  content: none;
+  z-index: 99;
 }
 .menu .menuNav {
   width: 590px;
@@ -310,4 +264,113 @@ a {
 }
 .menu .menuNavBottom__socialMedia {
   transition: transform .2s .4s;
+}
+@media all and (max-width: 768px) {
+  .menu .menuNavBottom__socialMedia {
+    transition: transform .2s .5s;
+  }
+}
+
+.switchIconBox {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  width: 39px;
+  height: 19px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  transition: background-color 800ms ease-in;
+  cursor: pointer;
+  z-index: 10;
+}
+.switchIconBox.appear {
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+.switchIconBox.appear .switchIcon {
+  width: 20px;
+  height: 2px;
+  position: absolute;
+  top: 9px;
+}
+.switchIconBox.appear .switchIcon:first-child {
+  transform: rotate(45deg);
+}
+.switchIconBox.appear .switchIcon:last-child {
+  transform: rotate(-45deg);
+}
+.switchIconBox.appear .switchIcon::before, .switchIconBox.appear .switchIcon::after {
+  content: none;
+}
+
+@media all and (max-width: 768px) {
+  .switchIconBox {
+    top: 25px;
+    left: 25px;
+  }
+}
+.switchIcon {
+  width: 17px;
+  height: 3px;
+  background-color: #fff;
+  transition: transform 500ms ease-in,background-color 500ms ease-in;
+}
+.switchIcon::before, .switchIcon::after {
+  content: '';
+  width: 17px;
+  height: 3px;
+  background: #fff;
+  position: absolute;
+}
+.switchIcon::before {
+  top: 0;
+}
+.switchIcon::after {
+  bottom: 0;
+}
+
+.kerwayContact {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1439539698758-ba2680ecadb9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80") no-repeat;
+  background-size: cover;
+  left: 100vw;
+  transition-property: left;
+  transition-duration: .3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 0.54);
+  transition-delay: 0s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: #fff;
+}
+.kerwayContact.appear {
+  left: 0;
+}
+.kerwayContact:after {
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.kerwayContact h2 {
+  position: relative;
+  z-index: 1;
+  font-size: 3rem;
+}
+.kerwayContact h3 {
+  position: relative;
+  z-index: 1;
+  font-size: 2rem;
 }

@@ -6,7 +6,8 @@
   height: 0;
   position: fixed;
   top: 0;
-
+  z-index: 2;
+  
   a {
     position: relative;
     color: #fff;
@@ -18,91 +19,22 @@
       }
     }
   }
-
-  // menu icon
-  .menuIconBox{
-    position: absolute;
-    left: 50px;
-    top: 50px;
-    width: 39px;
-    height: 19px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    transition: background-color 800ms ease-in;
-    cursor: pointer;
-    z-index: 10;
-  }
-
-  @include mediaquery_minipad {
-    .menuIconBox {
-      top: 25px;
-      left: 25px;
-    }
-  }
-
-  .menuIcon{
-    width: 17px;
-    height: 3px;
-    background-color: #fff;
-    transition: transform 500ms ease-in,background-color 500ms ease-in;
-
-    &::before, &::after {
-      content: '';
-      width: 17px;
-      height: 3px;
-      background: #fff;
-      position: absolute;
-    }
-
-    &::before {
-      top: 0;
-    }
-
-    &::after {
-      bottom: 0;
-    }
-  }
   
-
-  &.appear {
+  &.menuAppear {
     width: 100vw;
     height: 100vh;
-    @extend %menuAppear;
+    z-index: 99;
+    @extend %menuAppearPosition;
     
     .menuNav, .menuNavTop__mainBrand,.menuNavTop__subBrand, {
-      @extend %menuAppear;
+      @extend %menuAppearPosition;
     }
 
     .menuNavMiddle a img, .menuNavBottom .menuNavBottom__socialMedia {
-      @extend %menuAppear;
-    }
-    .menuIconBox {
-      display: block;
-      height: 20px;
-      width: 20px;
-    }
-    .menuIcon {
-      width: 20px;
-      height: 2px;
-      position: absolute;
-      top: 9px;
-
-      &:first-child{
-        transform: rotate(45deg);
-      }
-  
-      &:last-child{
-        transform: rotate(-45deg);
-      }
-
-      &::before,
-      &::after{
-          content: none;
-      }
+      @extend %menuAppearPosition;
     }
   }
+
 
   //whole nav
   .menuNav {
@@ -113,7 +45,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @extend %menuHide;
+    @extend %menuHidePosition;
   }
 
   @include mediaquery_minipad {
@@ -186,14 +118,14 @@
   }
 
   .menuNavTop__mainBrand {
-    @extend %menuHide;
+    @extend %menuHidePosition;
     transition: transform .2s 0s;
   }
 
   .menuNavTop__subBrand {
     display: flex;
     align-items: flex-end;
-    @extend %menuHide;
+    @extend %menuHidePosition;
     transition: transform .2s .1s;
   }
 
@@ -206,7 +138,7 @@
       height: 40px;
 
       img {
-        @extend %menuHide;
+        @extend %menuHidePosition;
       }
 
       &:nth-child(1) img{
@@ -270,7 +202,88 @@
   }
 
   .menuNavBottom__socialMedia {
-    @extend %menuHide;
+    @extend %menuHidePosition;
     transition: transform .2s .4s;
   }
+
+  @include mediaquery_minipad {
+    .menuNavBottom__socialMedia {
+      transition: transform .2s .5s;
+    }
+  }
+}
+
+// menu icon
+.switchIconBox{
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  width: 39px;
+  height: 19px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  transition: background-color 800ms ease-in;
+  cursor: pointer;
+  z-index: 10;
+
+  &.appear {
+    display: block;
+    height: 20px;
+    width: 20px;
+
+    .switchIcon {
+      width: 20px;
+      height: 2px;
+      position: absolute;
+      top: 9px;
+
+      &:first-child{
+        transform: rotate(45deg);
+      }
+  
+      &:last-child{
+        transform: rotate(-45deg);
+      }
+
+      &::before,
+      &::after{
+          content: none;
+      }
+    }
+  }
+}
+
+@include mediaquery_minipad {
+  .switchIconBox {
+    top: 25px;
+    left: 25px;
+  }
+}
+
+
+
+.switchIcon{
+  width: 17px;
+  height: 3px;
+  background-color: #fff;
+  transition: transform 500ms ease-in,background-color 500ms ease-in;
+
+  &::before, &::after {
+    content: '';
+    width: 17px;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
 }

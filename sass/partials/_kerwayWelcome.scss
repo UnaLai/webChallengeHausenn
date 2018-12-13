@@ -12,6 +12,15 @@ a{
 .kerwayWelcome{
   width: 100vw;
   position: relative;
+  left: 0;
+
+  &.appear {
+    left: -100vw;
+    transition-property: left;
+  transition-duration: .3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 0.54);
+  transition-delay: 0s;
+  }
 }
 .kerwayPhotoBg{
   background: url(../images/kerway/header_photo_background.png)  center center no-repeat;
@@ -52,16 +61,19 @@ a{
     width: 80vw;
   }
 }
-.goToContactUs img{
-  width: 100px;
-  height: 164px;
-  position: fixed;
-  right: 0;
-  bottom: 50%;
-  margin: auto;
-  @include mediaquery_phone{
-    display: none;
-  }
+.goToContactUs {
+    position: fixed;
+    right: 0;
+    bottom: 50%;
+    margin: auto;
+    cursor: pointer;
+  img{
+    width: 100px;
+    height: 164px;
+    @include mediaquery_phone{
+      display: none;
+    }
+}
 }
 .arrow img{
   width: 24px;
