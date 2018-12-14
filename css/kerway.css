@@ -434,9 +434,6 @@ a {
   transform: translateZ(-0.4px) scale(1.4);
 }
 
-.concept {
-  height: 100vh;
-}
 .concept .title {
   margin: 50px auto 175px;
   background-image: url("../images/kerway/banner_title.png");
