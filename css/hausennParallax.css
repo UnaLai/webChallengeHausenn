@@ -1,101 +1,576 @@
-/*
-Error: Undefined mixin 'transition'.
-        on line 32 of /Users/askie/Desktop/work/web/webChallengeHausenn/sass/partials/_parellaxSetting.scss, in `transition'
-        from line 32 of /Users/askie/Desktop/work/web/webChallengeHausenn/sass/partials/_parellaxSetting.scss
-        from line 6 of /Users/askie/Desktop/work/web/webChallengeHausenn/sass/hausennParallax.scss
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:300|Open+Sans:300");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-27:       //調整base層的排列
-28:       @include mediaquery_ipadpro {
-29:          //height 設計圖沒給，直接用100%後的圖片高度
-30:          height: 230px;
-31:       }
-32:       @include mediaquery_phone {
-33:          //height 設計圖沒給，直接用100%後的圖片高度
-34:          height: 113px;
-35:       }
-36:       .parallax__baselayer {
-37:          position: relative;
+li {
+  list-style: none;
+}
 
-Backtrace:
-/Users/askie/Desktop/work/web/webChallengeHausenn/sass/partials/_parellaxSetting.scss:32:in `transition'
-/Users/askie/Desktop/work/web/webChallengeHausenn/sass/partials/_parellaxSetting.scss:32
-/Users/askie/Desktop/work/web/webChallengeHausenn/sass/hausennParallax.scss:6
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/stack.rb:98:in `block in with_mixin'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/stack.rb:98:in `with_mixin'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block (2 levels) in visit_rule'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `map'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block in visit_rule'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:432:in `visit_rule'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block (2 levels) in visit_rule'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `map'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block in visit_rule'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:432:in `visit_rule'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:329:in `block (2 levels) in visit_import'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:329:in `map'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:329:in `block in visit_import'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/stack.rb:88:in `block in with_import'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/stack.rb:88:in `with_import'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:161:in `visit'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/tree/root_node.rb:20:in `render'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/engine.rb:284:in `render'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:331:in `block in watch'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
-/Users/askie/.rvm/gems/ruby-2.5.1/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined mixin 'transition'.\A         on line 32 of /Users/askie/Desktop/work/web/webChallengeHausenn/sass/partials/_parellaxSetting.scss, in `transition'\A         from line 32 of /Users/askie/Desktop/work/web/webChallengeHausenn/sass/partials/_parellaxSetting.scss\A         from line 6 of /Users/askie/Desktop/work/web/webChallengeHausenn/sass/hausennParallax.scss\A \A 27:       //調整base層的排列\A 28:       @include mediaquery_ipadpro {\A 29:          //height 設計圖沒給，直接用100%後的圖片高度\A 30:          height: 230px;\A 31:       }\A 32:       @include mediaquery_phone {\A 33:          //height 設計圖沒給，直接用100%後的圖片高度\A 34:          height: 113px;\A 35:       }\A 36:       .parallax__baselayer {\A 37:          position: relative;"; }
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.hausennFashion {
+  margin: 0 100px;
+  max-width: 100%;
+}
+@media all and (max-width: 375px) {
+  .hausennFashion {
+    margin: 0 20px;
+    max-width: 356.25px;
+  }
+}
+@media all and (max-width: 768px) {
+  .hausennFashion {
+    max-width: 614.4px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion {
+    max-width: 819.2px;
+  }
+}
+@media all and (max-width: 1366px) {
+  .hausennFashion {
+    max-width: 1092.8px;
+  }
+}
+
+.hausennFashion .blockCouture__title, .hausennFashion .blockCollections__title, .hausennFashion .blockSeasons__title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
+  letter-spacing: 4pt;
+  line-height: 49px;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCouture__title, .hausennFashion .blockCollections__title, .hausennFashion .blockSeasons__title {
+    font-size: 18px;
+    letter-spacing: 2pt;
+  }
+}
+
+.hausennFashion .blockCouture__custom, .hausennFashion .blockCollections__custom, .hausennFashion .blockSeasons__custom {
+  width: 100px;
+  height: 137px;
+  padding: 10px;
+  font-size: 10px;
+  letter-spacing: 2pt;
+  border: 1px solid black;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCouture__custom, .hausennFashion .blockCollections__custom, .hausennFashion .blockSeasons__custom {
+    border: none;
+  }
+}
+
+.hausennFashion .blockCouture__separate, .hausennFashion .blockCollections__separate, .hausennFashion .blockSeasons__separate {
+  width: 135px;
+  height: 28px;
+  background-color: black;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCouture__separate, .hausennFashion .blockCollections__separate, .hausennFashion .blockSeasons__separate {
+    width: 37px;
+    height: 7px;
+  }
+}
+
+.parallax {
+  perspective: 1px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100vh;
+  position: relative;
+  left: 0;
+}
+.parallax__group {
+  position: relative;
+  transform-style: preserve-3d;
+}
+.parallax__baselayer {
+  position: relative;
+  transform: translateZ(0px) scale(1);
+}
+.parallax__firstlayer {
+  transform: translateZ(-0.2px) scale(1.2);
+}
+.parallax__secendlayer {
+  transform: translateZ(-0.4px) scale(1.4);
+}
+.parallax.appear {
+  left: -100%;
+  transition-property: left;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 0.54);
+  transition-delay: 0.3s;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 75px 100px 65px;
+  font-size: .8rem;
+  letter-spacing: .13rem;
+  line-height: 1.6rem;
+  text-transform: uppercase;
+}
+footer.haussenFooter {
+  background: #decbc4;
+}
+footer a {
+  display: block;
+}
+footer img {
+  max-width: 100%;
+  height: 50px;
+}
+@media all and (max-width: 768px) {
+  footer img {
+    height: 23px;
+    margin-bottom: 25px;
+  }
+}
+footer .footerMailPhone {
+  margin-top: .5rem;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+@media all and (max-width: 768px) {
+  footer .footerMailPhone {
+    margin: 0 0 25px;
+  }
+}
+footer > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-basis: 100%;
+}
+@media all and (max-width: 768px) {
+  footer > div:first-child {
+    flex-direction: column-reverse;
+  }
+}
+footer .footerContactAddress {
+  font-family: ‘a-otf-futo-min-a101-pr6n’, serif;
+}
+footer .footerBrandBox {
+  margin-top: .2rem;
+  align-items: flex-end;
+}
+@media all and (max-width: 768px) {
+  footer .footerBrandBox {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+  }
+}
+footer .footerCopyright {
+  font-family: 'Open Sans', sans-serif;
+}
+@media all and (max-width: 768px) {
+  footer .footerCopyright {
+    font-size: .7rem;
+  }
+}
+footer .footerCopyright__sign {
+  font-family: initial;
+  font-size: .85rem;
+}
+
+.hausennFashion {
+  height: 100vh;
+}
+.hausennFashion .hausennTitle {
+  margin: 50px auto 173px;
+  background-image: url("../images/hausenn/banner_title 2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 200px;
+  height: 32px;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .hausennTitle {
+    margin: 50px auto;
+    width: 125px;
+    height: 20px;
+  }
+}
+.hausennFashion .blockImpression {
+  height: calc(411px + 95px + 292px);
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockImpression {
+    height: 230px;
+  }
+}
+@media all and (max-width: 375px) {
+  .hausennFashion .blockImpression {
+    height: 113px;
+  }
+}
+.hausennFashion .blockImpression .parallax__baselayer {
+  position: relative;
+  top: 50%;
+  left: 50%;
+}
+.hausennFashion .blockImpression__title {
+  width: 46%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 35px;
+  letter-spacing: 4pt;
+  line-height: 49px;
+  color: #000;
+  transform: translate(-50%, -50%);
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockImpression__title {
+    display: none;
+  }
+}
+.hausennFashion .blockImpression__model {
+  background-image: url("../images/hausenn/banner_img1 2.png");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 411px;
+  position: absolute;
+  top: -240px;
+  left: 0;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockImpression__model {
+    top: -70px;
+    height: 230px;
+  }
+}
+@media all and (max-width: 768px) {
+  .hausennFashion .blockImpression__model {
+    top: -65px;
+    height: 180px;
+  }
+}
+@media all and (max-width: 375px) {
+  .hausennFashion .blockImpression__model {
+    top: -64px;
+    height: 113px;
+  }
+}
+.hausennFashion .blockImpression__dress {
+  background-image: url("../images/hausenn/banner_img2.png");
+  background-position: center;
+  background-size: cover;
+  width: 570px;
+  height: 292px;
+  position: absolute;
+  top: 285px;
+  left: 4%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockImpression__dress {
+    display: none;
+  }
+}
+.hausennFashion .blockImpression__back {
+  width: 80%;
+  height: 28vw;
+  background-color: #efeceb;
+  position: absolute;
+  top: -80px;
+  left: 0;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockImpression__back {
+    top: -35px;
+  }
+}
+@media all and (max-width: 768px) {
+  .hausennFashion .blockImpression__back {
+    top: 20px;
+  }
+}
+@media all and (max-width: 375px) {
+  .hausennFashion .blockImpression__back {
+    top: -35px;
+  }
+}
+.hausennFashion .blockImpression__text {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  letter-spacing: 3pt;
+  line-height: 27px;
+  position: absolute;
+  top: 345px;
+  right: 7%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockImpression__text {
+    display: none;
+  }
+}
+.hausennFashion .blockSewing {
+  height: 570px;
+  margin-top: 160px;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockSewing {
+    margin-top: 100px;
+    height: 390px;
+  }
+}
+.hausennFashion .blockSewing__title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 25px;
+  letter-spacing: 4pt;
+  line-height: 40px;
+  color: #000;
+  transform: translate(25%, 180%);
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockSewing__title {
+    font-size: 14px;
+    letter-spacing: 2pt;
+    transform: translate(0, 70%);
+  }
+}
+.hausennFashion .blockSewing__separate {
+  width: 55px;
+  height: 7px;
+  background-color: black;
+  position: absolute;
+  top: 110px;
+  left: 25%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockSewing__separate {
+    left: 0;
+    top: 15px;
+  }
+}
+.hausennFashion .blockSewing__text {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  letter-spacing: 3pt;
+  line-height: 27px;
+  position: absolute;
+  top: 80px;
+  right: 5%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockSewing__text {
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.hausennFashion .blockCouture {
+  height: 732px;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCouture {
+    margin-top: 100px;
+    height: 281px;
+  }
+}
+.hausennFashion .blockCouture__title {
+  text-align: right;
+  transform: translate(-10%, 110%);
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCouture__title {
+    transform: translate(-5%, 80%);
+  }
+}
+.hausennFashion .blockCouture__custom {
+  position: absolute;
+  right: 12%;
+  top: 120px;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCouture__custom {
+    right: -8%;
+    top: 75px;
+  }
+}
+.hausennFashion .blockCouture__separate {
+  position: absolute;
+  right: 11%;
+  top: 320px;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCouture__separate {
+    right: 6%;
+    top: 120px;
+  }
+}
+.hausennFashion .blockCouture__pic {
+  width: 90%;
+  position: absolute;
+  top: -100px;
+  right: 4%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCouture__pic {
+    top: -75px;
+  }
+}
+.hausennFashion .blockCouture__back {
+  width: 36%;
+  height: 33vw;
+  background-color: #efeceb;
+  position: absolute;
+  top: -90px;
+  right: 4%;
+}
+.hausennFashion .blockCollections {
+  height: 760px;
+  margin-top: 100px;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCollections {
+    height: 160px;
+  }
+}
+.hausennFashion .blockCollections__title {
+  position: absolute;
+  top: 220px;
+  left: 7%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCollections__title {
+    top: 25px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCollections__custom {
+    transform: translate(17%, 42%);
+  }
+}
+.hausennFashion .blockCollections__separate {
+  position: absolute;
+  left: 7%;
+  top: 410px;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCollections__separate {
+    top: 100px;
+  }
+}
+.hausennFashion .blockCollections__pic {
+  width: 35vw;
+  position: absolute;
+  top: -74px;
+  left: 11%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCollections__pic {
+    top: -130px;
+    left: 10%;
+  }
+}
+.hausennFashion .blockCollections__back {
+  width: 36vw;
+  height: 30vw;
+  background-color: #efeceb;
+  position: absolute;
+  top: -220px;
+  left: 2%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCollections__back {
+    top: -180px;
+  }
+}
+.hausennFashion .blockSeasons {
+  height: 921px;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockSeasons {
+    height: 370px;
+  }
+}
+.hausennFashion .blockSeasons__title {
+  position: relative;
+  top: 455px;
+  left: 36%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockSeasons__title {
+    top: 0;
+    left: 37%;
+  }
+}
+.hausennFashion .blockSeasons__custom {
+  position: relative;
+  top: 390px;
+  left: 48%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockSeasons__custom {
+    top: 162px;
+    left: 35%;
+  }
+}
+.hausennFashion .blockSeasons__separate {
+  position: relative;
+  top: 417px;
+  right: -87%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockSeasons__separate {
+    left: 37%;
+    top: 12px;
+    right: -40%;
+  }
+}
+.hausennFashion .blockSeasons__back {
+  width: 13vw;
+  height: 16vw;
+  background-color: #efeceb;
+  position: absolute;
+  top: 200px;
+  right: 30%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockSeasons__back {
+    top: -24px;
+  }
+}
+.hausennFashion .blockSeasons__pic {
+  width: 33vw;
+  height: 42vw;
+  position: absolute;
+  top: -170px;
+  right: 3%;
+  z-index: 4;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockSeasons__pic {
+    top: -115px;
+  }
+}
+.hausennFashion .blockSeasons__background {
+  width: 54vw;
+  height: 43vw;
+  position: absolute;
+  z-index: 2;
+  right: 24%;
+  top: 110px;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockSeasons__background {
+    top: 40px;
+  }
+}

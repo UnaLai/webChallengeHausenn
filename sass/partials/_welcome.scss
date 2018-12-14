@@ -9,18 +9,23 @@ img{
 a{
   cursor: pointer;
 }
-.kerwayWelcome{
+.welcome{
   width: 100%;
   position: relative;
   left: 0;
 }
-.kerwayPhotoBg{
+.photoBg{
   background: url(../images/kerway/header_photo_background.png)  center center no-repeat;
   background-size: cover;
   width: 100%;
-  padding-bottom: 100vh
+  padding-bottom: 100vh;
+
+  &__hausenn {
+    background: url(../images/hausenn/header_photo_background.jpg) center center no-repeat;
+    background-size: cover;
+  }
 }
-.kerwayLogo::before,.kerwayLogo::after{
+.logo::before,.logo::after{
   content: "";
   display: block;
   width: 175px;
@@ -33,14 +38,13 @@ a{
     display: none;
   }
 }
-.kerwayLogo::before{
+.logo::before{
   left: 250px;
 }
-.kerwayLogo::after{
+.logo::after{
   right: 250px;
 }
-.kerwayLogo img{
-  // width: 37.335%;
+.logo img{
   width: 50vw;
   max-width: 510px;
   position: absolute;

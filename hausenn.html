@@ -6,14 +6,88 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Hausenn</title>
   <link rel="stylesheet" href="css/hausenn.css"/>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <!-- 瀑布流套件-masonry -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="http://masonry.desandro.com/jquery.masonry.min.js"></script>
+
+  <script src="./javascripts/kerwayWorks.js" defer></script>
 </head>
 <body>
-  <section class="hausennWelcome"></section>
-  <div class="menu"></div>
-  <section class="hausennContact"></section>
-  <section class="hausennFashion">
-    <div class="hausennFashion__show"></div>
-    <div class="footer"></div>
+  <nav class="menu menu__hausenn" id="nav">
+    <div class="switchIconBox" id="menuIcon">
+      <span class="switchIcon"></span>
+      <span class="switchIcon"></span>
+    </div>
+    <div class="menuNav">
+      <div class="menuNavTop">
+        <a href="#" class="menuNavTop__mainBrand menuNavTop__housennCamp"><img src="./images/menu/hausennCamp 2.png" alt="HAUSENNCAMP"></a>
+        <div class="menuNavTop__subBrand">
+          <a href="/hausenn.html" class="menuNavTop__brandLink">
+            <img src="./images/menu/hausenn 4.png" alt="HAUSENN">
+            <img src="./images/menu/hover_hausenn.png" alt="HAUSENN">
+          </a>
+          <a href="/kerway.html" class="menuNavTop__brandLink">
+            <img src="./images/menu/kerway.png" alt="KERWAY">
+            <img src="./images/menu/hover_kerway 2.png" alt="KERWAY">
+          </a>
+          <a href="#" class="menuNavTop__brandLink">
+            <img src="./images/menu/sonstay 2.png" alt="SONSTAY">
+            <img src="./images/menu/hover_sonstay 2.png" alt="SONSTAY">
+          </a>
+        </div>
+      </div>
+      <div class="menuNavMiddle">
+        <a href="#"><img src="./images/menu/works 2.png" alt="WORKS"></a>
+        <a href="#"><img src="./images/menu/news 2.png" alt="NEWS"></a>
+        <a href="#" class="menuNavMiddle__contactLink" id="contactMenuLink"><img src="./images/menu/contact.png" alt="CONTACT"></a>
+      </div>
+      <div class="menuNavBottom">
+        <div class="menuNavBottom__socialMedia">
+          <a href="#"><i class="fab fa-vimeo-v fa-fw"></i></a>
+          <a href="#"><i class="fab fa-facebook-f fa-fw"></i></a>
+          <a href="#"><i class="fab fa-instagram fa-fw"></i></a>
+          <a href="#"><i class="far fa-envelope fa-fw"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section class="contact" id="contactPage">
+    <div class="goToContactUs" id="contactButton">
+      <img src="./images/kerway/goToContactUs.png" alt="">
+    </div>
+    <h2>Contact Page</h2>
+    <h3>Lai, Mango, Askie</h3>
   </section>
+
+
+  <div class="parallax" id="wholePage">
+      <section class="welcome">
+          <div class="photoBg photoBg__hausenn"></div>
+          <div class="logo">
+            <img src="./images/hausenn/header_photo_foreground 2.png" alt="">
+          </div>
+          <div class="arrow">
+            <a href="">
+              <img src="./images/kerway/arrow.png" alt="">
+            </a>
+          </div>
+        </section>
+    <section class="hausennFashion">
+      <div class="hausennFashion__show"></div>
+    </section>
+    <footer class="haussenFooter">
+      <div>
+        <p class="footerContactAddress">台南市中西區開山路壹貳貳巷伍肆號</p>
+        <a href="hausenn.html"><img src="./images/footer/banner_title 2.png" alt="HAUSENN Logo"></a>
+      </div>
+      <div class="footerBrandBox">
+        <p class="footerMailPhone">Hausenncamp.tw@gmail.com<br>+886 6 225 5322</p>
+        <p class="footerCopyright">copyright <span class="footerCopyright__sign">&copy;</span> 2017 Hausenncamp</p>
+      </div>
+    </footer>
+  </div>
+  <script src="./javascripts/menu.js"></script>
 </body>
 </html>
