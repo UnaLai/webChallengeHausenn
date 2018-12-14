@@ -61,26 +61,6 @@ a{
     width: 80vw;
   }
 }
-.goToContactUs {
-    position: fixed;
-    right: 0;
-    bottom: 50%;
-    margin: auto;
-    cursor: pointer;
-  img {
-    width: 100px;
-    height: 164px;
-    @include mediaquery_phone{
-      display: none;
-    }
-  }
-  &.black {
-    img {
-      filter: invert(1);
-      -webkit-filter: invert(1);
-    }
-  }
-}
 .arrow img{
   width: 24px;
   height: 34px;

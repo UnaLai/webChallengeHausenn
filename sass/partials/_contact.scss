@@ -32,6 +32,27 @@
     left: 0;
   }
 
+  .goToContactUs {
+    position: fixed;
+    right: 0;
+    bottom: 50%;
+    margin: auto;
+    cursor: pointer;
+  img {
+    width: 100px;
+    height: 164px;
+    @include mediaquery_phone{
+      display: none;
+    }
+  }
+  &.black {
+    img {
+      filter: invert(1);
+      -webkit-filter: invert(1);
+    }
+  }
+}
+
   h2 {
     position: relative;
     z-index: 1;
