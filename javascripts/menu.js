@@ -14,7 +14,8 @@ var menuContactAnimate = function(){
       contactIcon     = document.getElementById('contactIcon'),
       wholePage         = document.getElementById('wholePage'),
       contactPage     = document.getElementById('contactPage'),
-      contactMenuLink = document.getElementById('contactMenuLink');
+      contactMenuLink = document.getElementById('contactMenuLink'),
+      filter = document.getElementById('filter');;
 
   var menuExist = nav.classList.contains(activeMenuClass),
       contactExist = nav.classList.contains(activeContactClass);
@@ -27,6 +28,7 @@ var menuContactAnimate = function(){
         contactPage.classList.remove(openAllClass);
         wholePage.classList.remove(openAllClass);
         nav.classList.remove(activeContactClass);
+        filter.classList.remove(openAllClass);
       }
 
       else if ( nav.classList.contains(activeMenuClass) ) {
@@ -51,7 +53,7 @@ var menuContactAnimate = function(){
     wholePage.classList.add(openAllClass);
     menuIcon.classList.add(openAllClass);
     nav.classList.add(activeContactClass);
-
+    filter.classList.add(openAllClass);
   });
 
   contactMenuLink.addEventListener('click', function(){

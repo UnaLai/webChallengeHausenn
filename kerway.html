@@ -23,7 +23,7 @@
   <nav class="menu" id="nav">
     <div class="switchIconBox" id="menuIcon">
       <span class="switchIcon"></span>
-      <span class="switchIcon"></span>
+      <span class="switchIcon"></span> 
     </div>
     <div class="menuNav">
       <div class="menuNavTop">
@@ -64,6 +64,32 @@
     </div>
     <h2>Contact Page</h2>
     <h3>Lai, Mango, Askie</h3>
+  </section>
+  <section class="filter" id="filter">
+    <a class="arrowUp" href="#kerwayWorksTop"><i class="fas fa-arrow-up"></i></a>
+    <a class="nineGrid"><i class="fas fa-th"></i></a>
+    <center></center>
+    <div id="kerwayListContainer">
+      <div id="work" class="kerwayList">
+        <div>工作項目</div>
+        <a href="#">靜態攝影</a>
+        <a href="#">獨立婚紗</a>
+        <a href="#">婚禮紀實</a>
+        <a href="#">商業攝影</a>
+      </div>
+      <div id="photographer" class="kerwayList">
+        <div>攝影師</div>
+        <a href="#">Lai</a>
+        <a href="#">Askie</a>
+        <a href="#">mango</a>
+      </div>
+      <div id="fashionStylist" class="kerwayList">
+        <div>造型師</div>
+        <a href="#">Lai</a>
+        <a href="#">Askie</a>
+        <a href="#">mango</a>
+      </div>
+    </div>
   </section>
   <div class="parallax" id="wholePage">
     <section class="welcome">
@@ -118,16 +144,21 @@
         </div>
       </div>
     </section>
-    <section class="kerwayWorks">
+    <section id="kerwayWorksTop" class="kerwayWorks">
       <div class="kerwayWorksTitel">
         <img src="./images/kerway/logo_2.png">
       </div>
       <div class="kerwayFilterTitel">
         <div></div>
         <div>works</div>
-        <div>作品</div>
+        <div id="showFilterText">作品</div>
       </div>
       <div id="MasonryLayout">
+        <template>
+          <div class="MasonryLayoutItem">
+            <img src="">
+          </div>
+        </template>
         <div class="MasonryLayoutItem">
           <img src="./images/kerway/_MG_2209_momo.jpg">
         </div>
@@ -175,7 +206,6 @@
         </div>
       </div>
     </section>
-
     <footer>
       <div>
         <p class="footerContactAddress">台南市中西區開山路壹貳貳巷伍肆號</p>

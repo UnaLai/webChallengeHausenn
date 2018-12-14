@@ -955,7 +955,7 @@ a {
   width: 100%;
 }
 
-#filter {
+.filter {
   position: fixed;
   bottom: 0vh;
   z-index: 2;
@@ -965,14 +965,20 @@ a {
   padding: 15px 50px 15px 100px;
   font-weight: 200;
   letter-spacing: 4px;
+  opacity: 1;
+  display: block;
+}
+.filter.appear {
+  opacity: 0;
+  display: none;
 }
 @media all and (max-width: 375px) {
-  #filter {
+  .filter {
     padding: 15px 10px 15px 10px;
   }
 }
 
-#filter > a:first-child {
+.filter > a:first-child {
   color: #fff;
 }
 

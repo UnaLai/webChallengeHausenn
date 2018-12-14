@@ -54,7 +54,7 @@
 }
 
 
-#filter{
+.filter{
 	position: fixed;
 	bottom: 0vh;
 	z-index: 2;
@@ -64,11 +64,17 @@
 	padding: 15px 50px 15px 100px;
 	font-weight: 200;
 	letter-spacing: 4px;
+	opacity: 1;
+	display: block;
+	&.appear {
+		opacity: 0;
+		display: none;
+	}
 	@include mediaquery_phone{
 		padding: 15px 10px 15px 10px;
 	}
 }
-#filter > a:first-child{
+.filter > a:first-child{
 	color: #fff;
 }
 .nineGrid{
