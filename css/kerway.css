@@ -906,6 +906,11 @@ a {
 .kerwayFilterTitel {
   margin-left: 50px;
 }
+@media all and (max-width: 375px) {
+  .kerwayFilterTitel {
+    margin-left: 10px;
+  }
+}
 
 .kerwayFilterTitel > div:nth-child(1) {
   width: 150px;
@@ -934,6 +939,11 @@ a {
   margin: 0 100px;
   z-index: 1;
 }
+@media all and (max-width: 375px) {
+  #MasonryLayout {
+    margin: 0 10px;
+  }
+}
 
 .MasonryLayoutItem {
   width: 350px;
@@ -945,147 +955,120 @@ a {
   width: 100%;
 }
 
-/********************************/
 #filter {
   position: fixed;
-  bottom: 50vh;
+  bottom: 0vh;
   z-index: 2;
-  width: 100vw;
+  width: 100%;
   background: rgba(0, 0, 0, 0.5);
-  padding-left: 100px;
+  color: #fff;
+  padding: 15px 50px 15px 100px;
+  font-weight: 200;
+  letter-spacing: 4px;
+}
+@media all and (max-width: 375px) {
+  #filter {
+    padding: 15px 10px 15px 10px;
+  }
+}
+
+#filter > a:first-child {
+  color: #fff;
+}
+
+.nineGrid {
+  float: left;
+}
+@media all and (max-width: 375px) {
+  .nineGrid {
+    display: none;
+  }
+}
+
+.arrowUp {
+  float: right;
+}
+
+.nineGrid, .arrowUp {
+  font-size: 24px;
 }
 
 center {
   position: relative;
 }
 
-.left {
-  float: left;
-  z-index: 5;
-}
-
-.right {
-  float: right;
-  z-index: 5;
-}
-
-#menuContainer {
-  width: 176.25px;
+.kerwayList {
+  width: 176px;
   display: flex;
   flex-direction: column;
   position: absolute;
-  bottom: -100;
   z-index: 4;
-  transition: bottom 0.2s;
+}
+@media all and (max-width: 375px) {
+  .kerwayList {
+    width: 90px;
+  }
 }
 
-#menuContainer:hover {
-  bottom: 100vh;
+#work {
+  bottom: -86px;
+  right: 542px;
+  transition: bottom 0.5s;
+}
+@media all and (max-width: 375px) {
+  #work {
+    left: 210px;
+  }
 }
 
-#menuContainer > a {
+#photographer {
+  bottom: -64px;
+  right: 321px;
+  transition: bottom 0.3s;
+}
+@media all and (max-width: 375px) {
+  #photographer {
+    left: 110px;
+  }
+}
+
+#fashionStylist {
+  bottom: -64px;
+  right: 100px;
+  transition: bottom 0.5s;
+}
+@media all and (max-width: 375px) {
+  #fashionStylist {
+    left: 10px;
+  }
+}
+
+#work:hover, #photographer:hover, #fashionStylist:hover {
+  bottom: 0;
+}
+
+.kerwayList > a {
   color: #000;
   background-color: #fff;
 }
 
-#menu * {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-#menu {
-  position: fixed;
-  bottom: 0vh;
-  z-index: 2;
-  width: 100vw;
-  background: rgba(0, 0, 0, 0.5);
-  padding-left: 100px;
-}
-
-#menu > ul {
-  display: flex;
-  justify-content: flex-end;
-}
-
-#menu > ul > li {
-  width: 176.25px;
-  height: 52px;
-  line-height: 52px;
-  margin-left: 45px;
-}
-
-#menu a {
-  display: block;
-  text-decoration: none;
-}
-
-center {
-  /* added this rule to make it above the submenu */
-  position: relative;
-  z-index: 3;
-}
-
-center a {
-  /* added this rule to make it above the submenu */
+.kerwayList > div:first-child {
   color: #fff;
-  letter-spacing: 4px;
+  background-color: transparent;
+  padding: 15px 5px;
 }
 
-#menu center:hover {
-  background: #fff;
-}
-
-/* changed this rule and the next to use the center tag rather than the anchor */
-#menu ul li ul li a:hover {
-  background: gray;
-}
-
-#menu ul li ul li {
-  border: none;
-  color: #fff;
-  z-index: 98;
-  background: #fff;
-}
-
-#menu ul li ul li a {
-  color: #000;
-}
-
-#menu li {
-  position: relative;
-}
-
-#menu ul li ul, #menu:hover ul li ul, #menu:hover ul li:hover ul li ul {
+.kerwayList > a {
   visibility: hidden;
-  /* Had to change display none to visibility:hidden */
-  position: absolute;
-  list-style-type: none;
 }
 
-#menu:hover ul, #menu:hover ul li:hover ul, #menu:hover ul li:hover ul li:hover ul {
+.kerwayList:hover > a {
   visibility: visible;
+  padding: 2px 5px;
 }
 
-/* Same here */
-#menu:hover ul li:hover ul li:hover ul {
-  position: absolute;
-}
-
-#menu:hover ul li:hover ul {
-  position: absolute;
-  margin-top: 1px;
-}
-
-/* added rule */
-#menu > ul > li > ul {
-  bottom: 0;
-  z-index: 98;
-  transition: bottom 0.2s;
-}
-
-#menu > ul > li:hover > ul {
-  bottom: 100%;
+.kerwayList:hover > a:hover {
+  background-color: gray;
 }
 
 footer {

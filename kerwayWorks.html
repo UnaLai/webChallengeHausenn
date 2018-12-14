@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Kerway</title>
   <link rel="stylesheet" href="css/kerway.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
   <!-- 瀑布流套件-masonry -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script src="http://masonry.desandro.com/jquery.masonry.min.js"></script>
@@ -16,71 +18,22 @@
 
 <body>
 
-  <div id="filter">
-    <!-- <center> -->
-    <div class="right">箭頭</div>
-      <div class="left">九宮格</div>
-      <center></center>
-      <div id="menuContainer">
-        <a href="#">工作項目</a>
-        <a href="#">靜態攝影</a>
-        <a href="#">獨立婚紗</a>
-        <a href="#">婚禮紀實</a>
-        <a href="#">商業攝影</a>
-      </div>
-    <!-- </center> -->
-  </div>
-  <!-- <div id="menuContainer">
-    <a href="#">工作項目</a>
-    <a href="#">靜態攝影</a>
-    <a href="#">獨立婚紗</a>
-    <a href="#">婚禮紀實</a>
-    <a href="#">商業攝影</a>
-  </div> -->
 
-  <div id="menu">
-    <ul>
-      <li>
-        <center><a href="#">工作項目</a></center>
-        <ul>
-          <li><a href="#">靜態攝影</a></li>
-          <li><a href="#">獨立婚紗</a></li>
-          <li><a href="#">婚禮紀實</a></li>
-          <li><a href="#">商業攝影</a></li>
-        </ul>
-      </li>
-
-      <li>
-        <center><a href="#">攝影師</a></center>
-        <ul>
-          <li><a href="#">D-Ki</a></li>
-          <li><a href="#">田中方糖</a></li>
-        </ul>
-      </li>
-
-      <li>
-        <center><a href="#">造型師</a></center>
-        <ul>
-          <li><a href="#">Lai</a></li>
-          <li><a href="#">Askie</a></li>
-          <li><a href="#">mango</a></li>
-        </ul>
-      </li>
-
-    </ul>
-  </div>
-
-
-  <section class="kerwayWorks">
+  <section id="kerwayWorksTop" class="kerwayWorks">
     <div class="kerwayWorksTitel">
       <img src="./images/kerway/logo_2.png">
     </div>
     <div class="kerwayFilterTitel">
       <div></div>
       <div>works</div>
-      <div>作品</div>
+      <div id="showFilterText">作品</div>
     </div>
     <div id="MasonryLayout">
+      <template>
+        <div class="MasonryLayoutItem">
+          <img src="">
+        </div>
+      </template>
       <div class="MasonryLayoutItem">
         <img src="./images/kerway/_MG_2209_momo.jpg">
       </div>
@@ -127,9 +80,35 @@
         <img src="./images/kerway/banner_img41.png">
       </div>
     </div>
-
-
   </section>
+
+  <div id="filter">
+    <a class="arrowUp" href="#kerwayWorksTop"><i class="fas fa-arrow-up"></i></a>
+    <a class="nineGrid"><i class="fas fa-th"></i></a>
+    <center></center>
+    <div id="kerwayListContainer">
+      <div id="work" class="kerwayList">
+        <div>工作項目</div>
+        <a href="#">靜態攝影</a>
+        <a href="#">獨立婚紗</a>
+        <a href="#">婚禮紀實</a>
+        <a href="#">商業攝影</a>
+      </div>
+      <div id="photographer" class="kerwayList">
+        <div>攝影師</div>
+        <a href="#">Lai</a>
+        <a href="#">Askie</a>
+        <a href="#">mango</a>
+      </div>
+      <div id="fashionStylist" class="kerwayList">
+        <div>造型師</div>
+        <a href="#">Lai</a>
+        <a href="#">Askie</a>
+        <a href="#">mango</a>
+      </div>
+    </div>
+  </div>
+
 
 </body>
 
