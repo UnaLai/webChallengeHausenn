@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:300|Open+Sans:300");
 * {
   padding: 0;
   margin: 0;
@@ -101,6 +103,10 @@ a {
     display: none;
   }
 }
+.goToContactUs.black img {
+  filter: invert(1);
+  -webkit-filter: invert(1);
+}
 
 .arrow img {
   width: 24px;
@@ -124,6 +130,32 @@ a {
     transform: translateY(0px);
   }
 }
+footer {
+  margin: 0 100px;
+  max-width: 100%;
+}
+@media all and (max-width: 375px) {
+  footer {
+    margin: 0 20px;
+    max-width: 356.25px;
+  }
+}
+@media all and (max-width: 768px) {
+  footer {
+    max-width: 614.4px;
+  }
+}
+@media all and (max-width: 1024px) {
+  footer {
+    max-width: 819.2px;
+  }
+}
+@media all and (max-width: 1366px) {
+  footer {
+    max-width: 1092.8px;
+  }
+}
+
 .menu .menuNav, .menu .menuNavTop__mainBrand, .menu .menuNavTop__subBrand, .menu .menuNavMiddle a img, .menu .menuNavBottom__socialMedia {
   transform: translateX(-590px);
 }
@@ -146,6 +178,12 @@ a {
 .menu a:hover img, .menu a:hover i {
   opacity: .6;
   transition: opacity .2s;
+}
+.menu a.menuNavLocation {
+  opacity: .6;
+}
+.menu a.menuNavLocation:hover {
+  opacity: inherit;
 }
 .menu.menuAppear {
   width: 100vw;
@@ -305,6 +343,12 @@ a {
 .switchIconBox.appear .switchIcon::before, .switchIconBox.appear .switchIcon::after {
   content: none;
 }
+.switchIconBox.black .switchIcon {
+  background: #000;
+}
+.switchIconBox.black .switchIcon::before, .switchIconBox.black .switchIcon::after {
+  background: #000;
+}
 
 @media all and (max-width: 768px) {
   .switchIconBox {
@@ -373,4 +417,75 @@ a {
   position: relative;
   z-index: 1;
   font-size: 2rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 75px 0 65px;
+  font-size: .8rem;
+  letter-spacing: .13rem;
+  line-height: 1.6rem;
+  text-transform: uppercase;
+}
+footer a {
+  display: block;
+}
+footer img {
+  max-width: 100%;
+  height: 50px;
+}
+@media all and (max-width: 768px) {
+  footer img {
+    height: 23px;
+    margin-bottom: 25px;
+  }
+}
+footer .footerMailPhone {
+  margin-top: .5rem;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+@media all and (max-width: 768px) {
+  footer .footerMailPhone {
+    margin: 0 0 25px;
+  }
+}
+footer > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-basis: 100%;
+}
+@media all and (max-width: 768px) {
+  footer > div:first-child {
+    flex-direction: column-reverse;
+  }
+}
+footer .footerContactAddress {
+  font-family: ‘a-otf-futo-min-a101-pr6n’, serif;
+}
+footer .footerBrandBox {
+  margin-top: .2rem;
+  align-items: flex-end;
+}
+@media all and (max-width: 768px) {
+  footer .footerBrandBox {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+  }
+}
+footer .footerCopyright {
+  font-family: 'Open Sans', sans-serif;
+}
+@media all and (max-width: 768px) {
+  footer .footerCopyright {
+    font-size: .7rem;
+  }
+}
+footer .footerCopyright__sign {
+  font-family: initial;
+  font-size: .85rem;
 }

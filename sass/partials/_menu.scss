@@ -18,6 +18,13 @@
         transition: opacity .2s;
       }
     }
+    &.menuNavLocation {
+      opacity: .6;
+
+      &:hover {
+        opacity: inherit;
+      }
+    }
   }
   
   &.menuAppear {
@@ -250,6 +257,16 @@
       &::before,
       &::after{
           content: none;
+      }
+    }
+  }
+
+  &.black {
+    .switchIcon {
+      background: #000;
+
+      &::before, &::after {
+        background: #000;
       }
     }
   }

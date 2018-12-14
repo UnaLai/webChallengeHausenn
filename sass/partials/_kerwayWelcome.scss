@@ -67,13 +67,19 @@ a{
     bottom: 50%;
     margin: auto;
     cursor: pointer;
-  img{
+  img {
     width: 100px;
     height: 164px;
     @include mediaquery_phone{
       display: none;
     }
-}
+  }
+  &.black {
+    img {
+      filter: invert(1);
+      -webkit-filter: invert(1);
+    }
+  }
 }
 .arrow img{
   width: 24px;
@@ -86,7 +92,7 @@ a{
   animation: upDown 1s infinite;
 }
 @keyframes upDown{
-0% { transform:translateY(0px);}
-50% {transform:translateY(10px);}
-100% {transform:translateY(0px);}
+  0% { transform:translateY(0px);}
+  50% {transform:translateY(10px);}
+  100% {transform:translateY(0px);}
 }
