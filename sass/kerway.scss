@@ -5,4 +5,9 @@
 @import './partials/kerwayWelcome';
 @import './partials/menu';
 @import './partials/contact';
+@import './partials/kerwayParallax.scss';
 @import './partials/footer';
+
+body {
+   // overflow-y: hidden;
+}

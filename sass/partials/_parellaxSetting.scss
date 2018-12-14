@@ -3,8 +3,9 @@
    overflow-x: hidden;
    overflow-y: auto;
    height: 100vh;
+   // width: 100%;
    &::-webkit-scrollbar {
-      width: 0;
+      // width: 0;
    }
    &__group {
       position: relative;

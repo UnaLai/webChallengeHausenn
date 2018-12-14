@@ -1,9 +1,9 @@
-@import "./partials/_normalize.scss";
-@import "./modules/_variablesWidth.scss";
 @import "./modules/_mixinMediaquery.scss";
 @import "./modules/_extendClass.scss";
 @import './modules/_mixin-parallax.scss';
 @import './partials/parellaxSetting.scss';
+
+
 .concept {
    height: 100vh;
    @extend %container--fixed;

@@ -90,9 +90,6 @@ footer, .hausennFashion {
   overflow-y: auto;
   height: 100vh;
 }
-.parallax::-webkit-scrollbar {
-  width: 0;
-}
 .parallax__group {
   position: relative;
   transform-style: preserve-3d;

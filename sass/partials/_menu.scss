@@ -7,7 +7,7 @@
   position: fixed;
   top: 0;
   z-index: 2;
-  
+
   a {
     position: relative;
     color: #fff;
@@ -18,21 +18,14 @@
         transition: opacity .2s;
       }
     }
-    &.menuNavLocation {
-      opacity: .6;
-
-      &:hover {
-        opacity: inherit;
-      }
-    }
   }
-  
+
   &.menuAppear {
     width: 100vw;
     height: 100vh;
     z-index: 99;
     @extend %menuAppearPosition;
-    
+
     .menuNav, .menuNavTop__mainBrand,.menuNavTop__subBrand, {
       @extend %menuAppearPosition;
     }
@@ -136,7 +129,7 @@
     transition: transform .2s .1s;
   }
 
-  
+
 
   //middle
   .menuNavMiddle {
@@ -160,7 +153,7 @@
         transition: transform .2s .4s;
       }
 
-      
+
     }
 
     @include mediaquery_ipad {
@@ -249,7 +242,7 @@
       &:first-child{
         transform: rotate(45deg);
       }
-  
+
       &:last-child{
         transform: rotate(-45deg);
       }
