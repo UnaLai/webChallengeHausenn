@@ -55,7 +55,7 @@
     @extend %menuHidePosition;
   }
 
-  @include mediaquery_minipad {
+  @include mediaquery_ipad {
     .menuNav {
       width: 100%;
       height: 100%;
@@ -163,7 +163,7 @@
       
     }
 
-    @include mediaquery_minipad {
+    @include mediaquery_ipad {
       a {
         height: 35px;
       }
@@ -173,7 +173,7 @@
       margin-top: 48px;
     }
 
-    @include mediaquery_minipad {
+    @include mediaquery_ipad {
       a + a {
         margin: 40px 0;
       }
@@ -183,7 +183,7 @@
       visibility: hidden;
     }
 
-    @include mediaquery_minipad {
+    @include mediaquery_ipad {
       .menuNavMiddle__contactLink {
         visibility: visible;
       }
@@ -213,7 +213,7 @@
     transition: transform .2s .4s;
   }
 
-  @include mediaquery_minipad {
+  @include mediaquery_ipad {
     .menuNavBottom__socialMedia {
       transition: transform .2s .5s;
     }
@@ -272,7 +272,7 @@
   }
 }
 
-@include mediaquery_minipad {
+@include mediaquery_ipad {
   .switchIconBox {
     top: 25px;
     left: 25px;

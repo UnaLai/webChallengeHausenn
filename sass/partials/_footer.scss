@@ -22,7 +22,7 @@ footer {
     height: 50px;
   }
 
-  @include mediaquery_minipad { 
+  @include mediaquery_ipad {
     img {
       height: 23px;
       margin-bottom: 25px;
@@ -34,7 +34,7 @@ footer {
     font-family: 'Noto Sans TC', sans-serif;
   }
 
-  @include mediaquery_minipad {
+  @include mediaquery_ipad {
     .footerMailPhone{
       margin: 0 0 25px;
     }
@@ -47,7 +47,7 @@ footer {
     flex-basis: 100%;
   }
 
-  @include mediaquery_minipad {
+  @include mediaquery_ipad {
     > div:first-child {
       flex-direction: column-reverse;
     }
@@ -62,7 +62,7 @@ footer {
     align-items: flex-end;
   }
 
-  @include mediaquery_minipad {
+  @include mediaquery_ipad {
     .footerBrandBox{
       flex-direction: column;
       align-items: flex-start;
@@ -74,7 +74,7 @@ footer {
     font-family: 'Open Sans', sans-serif;
   }
 
-  @include mediaquery_minipad {
+  @include mediaquery_ipad {
     .footerCopyright{
       font-size: .7rem;
     }

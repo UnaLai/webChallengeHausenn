@@ -3,12 +3,12 @@
         @content;
     }
 }
-@mixin mediaquery_minipad {
+@mixin mediaquery_ipad {
     @media all and (max-width: $width--ipad) {
         @content;
     }
 }
-@mixin mediaquery_pad {
+@mixin mediaquery_ipadpro {
     @media all and (max-width: $width--ipadpro) {
         @content;
     }

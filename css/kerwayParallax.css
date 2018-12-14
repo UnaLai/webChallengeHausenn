@@ -1,0 +1,328 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.concept {
+  margin: 0 100px;
+  max-width: 100%;
+}
+@media all and (max-width: 375px) {
+  .concept {
+    margin: 0 20px;
+    max-width: 356.25px;
+  }
+}
+@media all and (max-width: 768px) {
+  .concept {
+    max-width: 614.4px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .concept {
+    max-width: 819.2px;
+  }
+}
+@media all and (max-width: 1366px) {
+  .concept {
+    max-width: 1092.8px;
+  }
+}
+
+.parallax {
+  perspective: 1px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100vh;
+}
+.parallax::-webkit-scrollbar {
+  width: 0;
+}
+.parallax__group {
+  position: relative;
+  transform-style: preserve-3d;
+}
+.parallax__baselayer {
+  position: relative;
+  transform: translateZ(0px) scale(1);
+}
+.parallax__firstlayer {
+  transform: translateZ(-0.2px) scale(1.2);
+}
+.parallax__secendlayer {
+  transform: translateZ(-0.4px) scale(1.4);
+}
+
+.concept {
+  height: 100vh;
+}
+.concept .title {
+  margin: 50px auto 175px;
+  background-image: url("../images/kerway/banner_title.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 192px;
+  height: 32px;
+}
+@media all and (max-width: 1024px) {
+  .concept .title {
+    margin: 35px auto;
+    width: 139px;
+    height: 23px;
+  }
+}
+.concept .mainSeparate {
+  width: 36px;
+  height: 4px;
+  background-color: black;
+  margin-right: 110px;
+}
+@media all and (max-width: 1024px) {
+  .concept .mainSeparate {
+    width: 21px;
+    height: 2px;
+    margin-right: 40px;
+  }
+}
+.concept .secondaryPicTop {
+  width: 390px;
+  height: 520px;
+  background-image: url("../images/kerway/banner_img41.png");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 30%;
+}
+@media all and (max-width: 1024px) {
+  .concept .secondaryPicTop {
+    width: 150px;
+    height: 200px;
+    right: 33%;
+  }
+}
+.concept .secondaryArticle {
+  font-size: 12pt;
+  line-height: 24pt;
+  letter-spacing: 2pt;
+  width: 325px;
+  position: relative;
+  top: 360px;
+  left: 70px;
+}
+@media all and (max-width: 1024px) {
+  .concept .secondaryArticle {
+    font-size: 10pt;
+    line-height: 16pt;
+    top: 360px;
+    width: 100%;
+    left: 0;
+  }
+}
+.concept .mainTitle {
+  position: absolute;
+  top: -300px;
+  right: 9%;
+  font-size: 44pt;
+  line-height: 65pt;
+  letter-spacing: 2pt;
+  text-align: right;
+}
+@media all and (max-width: 1024px) {
+  .concept .mainTitle {
+    font-size: 21pt;
+    line-height: 35pt;
+    top: -180px;
+  }
+}
+.concept .secondaryTitle {
+  font-size: 44pt;
+  line-height: 65pt;
+  letter-spacing: 3pt;
+  position: absolute;
+  top: -715px;
+  left: 6%;
+}
+@media all and (max-width: 1024px) {
+  .concept .secondaryTitle {
+    font-size: 21pt;
+    line-height: 35pt;
+    letter-spacing: 2pt;
+    top: -70px;
+    left: 0;
+  }
+}
+.concept .secondaryPicSecond {
+  position: absolute;
+  top: -650px;
+  right: 10%;
+  width: 390px;
+  height: 520px;
+  background-image: url("../images/kerway/banner_img42.png");
+  background-position: center;
+  background-size: cover;
+}
+@media all and (max-width: 1024px) {
+  .concept .secondaryPicSecond {
+    width: 150px;
+    height: 200px;
+    top: -175px;
+    right: 25%;
+  }
+}
+.concept .mainPic {
+  width: 100%;
+  height: 643px;
+  background-image: url("../images/kerway/banner_img1.png");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: -825px;
+}
+@media all and (max-width: 1024px) {
+  .concept .mainPic {
+    height: calc(345px * 0.55);
+    top: -313px;
+  }
+}
+.concept .mainSubtitle {
+  font-size: 14pt;
+  line-height: 24pt;
+  letter-spacing: 3pt;
+  text-align: right;
+  position: absolute;
+  top: 130px;
+  right: 10%;
+}
+@media all and (max-width: 1024px) {
+  .concept .mainSubtitle {
+    font-size: 12pt;
+    top: 45px;
+  }
+}
+.concept .secondarySubtitle {
+  position: relative;
+  top: -550px;
+  left: 310px;
+  width: 150px;
+  font-size: 19pt;
+  line-height: 38pt;
+  letter-spacing: 3pt;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+@media all and (max-width: 1024px) {
+  .concept .secondarySubtitle {
+    font-size: 12pt;
+    line-height: 24pt;
+    top: 40px;
+    left: 33%;
+  }
+}
+.concept .secondarySeparate {
+  position: absolute;
+  top: -360px;
+  left: 0;
+  width: 36px;
+  height: 4px;
+  background-color: black;
+}
+@media all and (max-width: 1024px) {
+  .concept .secondarySeparate {
+    width: 21px;
+    height: 2px;
+    top: 140px;
+  }
+}
+.concept .secondaryPicBottom {
+  position: absolute;
+  top: -540px;
+  right: -5%;
+  width: 390px;
+  height: 520px;
+  background-image: url("../images/kerway/banner_img43.png");
+  background-position: center;
+  background-size: cover;
+}
+@media all and (max-width: 1024px) {
+  .concept .secondaryPicBottom {
+    width: 150px;
+    height: 200px;
+    top: -156px;
+    right: 18%;
+  }
+}
+
+.mainBaselayer {
+  height: calc(643px + 400px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+@media all and (max-width: 1024px) {
+  .mainBaselayer {
+    height: calc(345px * 0.55 + 150px);
+  }
+}
+
+.secondary {
+  display: flex;
+  margin-top: 450px;
+}
+@media all and (max-width: 1024px) {
+  .secondary {
+    margin-top: 0;
+    flex-direction: column;
+  }
+}
+.secondary__text {
+  width: 50%;
+}
+@media all and (max-width: 1024px) {
+  .secondary__text {
+    width: 100%;
+    order: 2;
+  }
+}
+.secondary__pic {
+  width: 50%;
+}
+@media all and (max-width: 1024px) {
+  .secondary__pic {
+    width: 100%;
+    order: 1;
+  }
+}
+
+.secondaryPicBaselayer,
+.secondaryTextBaselayer {
+  height: calc(165px + 200px + 230px + 100px + 100px);
+}
+
+@media all and (max-width: 1024px) {
+  .secondaryPicBaselayer {
+    height: 200px;
+    margin-top: 300px;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .secondaryTextBaselayer {
+    height: 200px;
+  }
+}

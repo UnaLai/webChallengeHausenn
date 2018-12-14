@@ -1,0 +1,5 @@
+$perspectiveSet: 1;
+
+@mixin calcTranslatezScale($translatez){
+  transform: translateZ(#{$translatez}px) scale(1 + $translatez * -1 / $perspectiveSet) ;
+}

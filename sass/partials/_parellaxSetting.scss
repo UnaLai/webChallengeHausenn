@@ -1,0 +1,24 @@
+.parallax {
+   perspective: 1px;
+   overflow-x: hidden;
+   overflow-y: auto;
+   height: 100vh;
+   &::-webkit-scrollbar {
+      width: 0;
+   }
+   &__group {
+      position: relative;
+      transform-style: preserve-3d;
+      // outline: 1px red solid;
+   }
+   &__baselayer {
+      position: relative;
+      @include calcTranslatezScale(0);
+   }
+   &__firstlayer {
+      @include calcTranslatezScale(-0.2);
+   }
+   &__secendlayer {
+      @include calcTranslatezScale(-0.4);
+   }
+ }
