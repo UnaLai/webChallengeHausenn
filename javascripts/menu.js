@@ -12,7 +12,7 @@ var menuContactAnimate = function(){
 
   var contactButton   = document.getElementById('contactButton'),
       contactIcon     = document.getElementById('contactIcon'),
-      welcome         = document.getElementById('welcome'),
+      wholePage         = document.getElementById('wholePage'),
       contactPage     = document.getElementById('contactPage'),
       contactMenuLink = document.getElementById('contactMenuLink');
 
@@ -25,7 +25,7 @@ var menuContactAnimate = function(){
       if ( nav.classList.contains(activeContactClass) ) {
         // 要關閉 contact
         contactPage.classList.remove(openAllClass);
-        welcome.classList.remove(openAllClass);
+        wholePage.classList.remove(openAllClass);
         nav.classList.remove(activeContactClass);
       }
 
@@ -47,22 +47,21 @@ var menuContactAnimate = function(){
   /* 右側點擊 1366px */
   contactButton.addEventListener('click', function(){
     // 要開啟 contact
-    contactIcon.classList.add(openAllClass);
+    // contactIcon.classList.add(openAllClass);
     contactPage.classList.add(openAllClass);
-    welcome.classList.add(openAllClass);
+    wholePage.classList.add(openAllClass);
     menuIcon.classList.add(openAllClass);
 
     nav.classList.add(activeContactClass);
-    console.log('點擊右側 Menu: '+ menuExist, '. contact: '+ contactExist);
 
   });
 
   /* 左側點擊 @Menu 375px */
-  contactIcon.addEventListener('click', function(){
-    contactIcon.classList.remove(openAllClass);
-    contactPage.classList.remove(openAllClass);
-    welcome.classList.remove(openAllClass);
-  });
+  // contactIcon.addEventListener('click', function(){
+  //   // Icon.classList.remove(openAllClass);
+  //   contactPage.classList.remove(openAllClass);
+  //   wholePage.classList.remove(openAllClass);
+  // });
 
   contactMenuLink.addEventListener('click', function(){
     nav.classList.remove(activeMenuClass);

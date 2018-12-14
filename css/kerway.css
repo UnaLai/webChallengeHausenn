@@ -32,13 +32,6 @@ a {
   position: relative;
   left: 0;
 }
-.kerwayWelcome.appear {
-  left: -100%;
-  transition-property: left;
-  transition-duration: .3s;
-  transition-timing-function: cubic-bezier(0.4, 0, 1, 0.54);
-  transition-delay: 0s;
-}
 
 .kerwayPhotoBg {
   background: url(../images/kerway/header_photo_background.png) center center no-repeat;
@@ -235,13 +228,22 @@ a {
   height: 40px;
 }
 .menu .menuNavMiddle a:nth-child(1) img {
-  transition: transform .2s .2s;
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+  transition-delay: 0.2s;
 }
 .menu .menuNavMiddle a:nth-child(2) img {
-  transition: transform .2s .3s;
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+  transition-delay: 0.3s;
 }
 .menu .menuNavMiddle a:nth-child(3) img {
-  transition: transform .2s .4s;
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+  transition-delay: 0.4s;
 }
 @media all and (max-width: 768px) {
   .menu .menuNavMiddle a {
@@ -297,15 +299,15 @@ a {
   z-index: 10;
 }
 .switchIconBox.appear {
-  display: block;
   height: 20px;
   width: 20px;
+  justify-content: center;
+  left: 59px;
 }
 .switchIconBox.appear .switchIcon {
   width: 20px;
   height: 2px;
   position: absolute;
-  top: 9px;
 }
 .switchIconBox.appear .switchIcon:first-child {
   transform: rotate(45deg);
@@ -315,6 +317,11 @@ a {
 }
 .switchIconBox.appear .switchIcon::before, .switchIconBox.appear .switchIcon::after {
   content: none;
+}
+@media all and (max-width: 768px) {
+  .switchIconBox.appear {
+    left: 20px;
+  }
 }
 .switchIconBox.black .switchIcon {
   background: #000;
@@ -349,7 +356,7 @@ a {
   bottom: 0;
 }
 
-.kerwayContact {
+.contact {
   position: fixed;
   top: 0;
   z-index: 1;
@@ -359,9 +366,9 @@ a {
   background-size: cover;
   left: 100vw;
   transition-property: left;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.4, 0, 1, 0.54);
-  transition-delay: 0s;
+  transition-delay: 0.3s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -369,10 +376,18 @@ a {
   flex-direction: column;
   color: #fff;
 }
-.kerwayContact.appear {
+.contact.appear {
   left: 0;
 }
-.kerwayContact:after {
+.contact.appear .goToContactUs {
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity, visibility;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
+  transition-delay: 0.1s;
+}
+.contact:after {
   content: '';
   width: 100vw;
   height: 100vh;
@@ -381,32 +396,38 @@ a {
   top: 0;
   left: 0;
 }
-.kerwayContact .goToContactUs {
+.contact .goToContactUs {
   position: fixed;
   right: 0;
   bottom: 50%;
   margin: auto;
   cursor: pointer;
+  opacity: 1;
+  visibility: visible;
+  transition-property: opacity, visibility;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
+  transition-delay: 0.3s;
 }
-.kerwayContact .goToContactUs img {
+.contact .goToContactUs img {
   width: 100px;
   height: 164px;
 }
 @media all and (max-width: 375px) {
-  .kerwayContact .goToContactUs img {
+  .contact .goToContactUs img {
     display: none;
   }
 }
-.kerwayContact .goToContactUs.black img {
+.contact .goToContactUs.black img {
   filter: invert(1);
   -webkit-filter: invert(1);
 }
-.kerwayContact h2 {
+.contact h2 {
   position: relative;
   z-index: 1;
   font-size: 3rem;
 }
-.kerwayContact h3 {
+.contact h3 {
   position: relative;
   z-index: 1;
   font-size: 2rem;
@@ -417,6 +438,8 @@ a {
   overflow-x: hidden;
   overflow-y: auto;
   height: 100vh;
+  position: relative;
+  left: 0;
 }
 .parallax__group {
   position: relative;
@@ -431,6 +454,13 @@ a {
 }
 .parallax__secendlayer {
   transform: translateZ(-0.4px) scale(1.4);
+}
+.parallax.appear {
+  left: -100%;
+  transition-property: left;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 0.54);
+  transition-delay: 0.3s;
 }
 
 .concept .title {

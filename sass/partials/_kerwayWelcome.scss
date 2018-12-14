@@ -13,14 +13,6 @@ a{
   width: 100%;
   position: relative;
   left: 0;
-
-  &.appear {
-    left: -100%;
-    transition-property: left;
-  transition-duration: .3s;
-  transition-timing-function: cubic-bezier(0.4, 0, 1, 0.54);
-  transition-delay: 0s;
-  }
 }
 .kerwayPhotoBg{
   background: url(../images/kerway/header_photo_background.png)  center center no-repeat;

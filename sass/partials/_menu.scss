@@ -1,5 +1,6 @@
 @import '../modules/mixinMediaquery';
 @import '../modules/extendClass';
+@import '../modules/mixinTransition';
 
 .menu {
   width: 0;
@@ -142,15 +143,18 @@
       }
 
       &:nth-child(1) img{
-        transition: transform .2s .2s;
+        transition-property: transform;
+        @include transition(.2s, ease-in, .2s);
       }
 
       &:nth-child(2) img{
-        transition: transform .2s .3s;
+        transition-property: transform;
+        @include transition(.2s, ease-in, .3s);
       }
 
       &:nth-child(3) img{
-        transition: transform .2s .4s;
+        transition-property: transform;
+        @include transition(.2s, ease-in, .4s);
       }
 
 
@@ -225,19 +229,20 @@
   align-items: center;
   align-content: center;
   transition: background-color 800ms ease-in;
+  
   cursor: pointer;
   z-index: 10;
 
   &.appear {
-    display: block;
     height: 20px;
     width: 20px;
+    justify-content: center;
+    left: 59px;
 
     .switchIcon {
       width: 20px;
       height: 2px;
       position: absolute;
-      top: 9px;
 
       &:first-child{
         transform: rotate(45deg);
@@ -251,6 +256,11 @@
       &::after{
           content: none;
       }
+    }
+  }
+  @include mediaquery_ipad {
+    &.appear {
+      left: 20px;
     }
   }
 
