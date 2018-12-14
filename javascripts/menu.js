@@ -47,7 +47,6 @@ var menuContactAnimate = function(){
   /* 右側點擊 1366px */
   contactButton.addEventListener('click', function(){
     // 要開啟 contact
-    // contactIcon.classList.add(openAllClass);
     contactPage.classList.add(openAllClass);
     wholePage.classList.add(openAllClass);
     menuIcon.classList.add(openAllClass);
@@ -55,13 +54,6 @@ var menuContactAnimate = function(){
     nav.classList.add(activeContactClass);
 
   });
-
-  /* 左側點擊 @Menu 375px */
-  // contactIcon.addEventListener('click', function(){
-  //   // Icon.classList.remove(openAllClass);
-  //   contactPage.classList.remove(openAllClass);
-  //   wholePage.classList.remove(openAllClass);
-  // });
 
   contactMenuLink.addEventListener('click', function(){
     nav.classList.remove(activeMenuClass);
