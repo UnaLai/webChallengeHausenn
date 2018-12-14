@@ -18,7 +18,7 @@ var menuContactAnimate = function(){
 
   var menuExist = nav.classList.contains(activeMenuClass),
       contactExist = nav.classList.contains(activeContactClass);
-  
+
   menuIcon.addEventListener('click', function(){
     menuIcon.classList.toggle(openAllClass);
 
@@ -28,7 +28,7 @@ var menuContactAnimate = function(){
         welcome.classList.remove(openAllClass);
         nav.classList.remove(activeContactClass);
       }
-      
+
       else if ( nav.classList.contains(activeMenuClass) ) {
         // 關閉 contact
         nav.classList.remove(activeMenuClass);
@@ -69,6 +69,6 @@ var menuContactAnimate = function(){
     nav.classList.add(activeContactClass);
     contactPage.classList.add(openAllClass);
   });
-  
+
 
 }();
