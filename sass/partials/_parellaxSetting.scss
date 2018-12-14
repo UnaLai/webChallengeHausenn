@@ -1,5 +1,6 @@
-@import './modules/variablesBezier';
+@import '../modules/variablesBezier';
 @import '../modules/mixinTransition';
+@import '../modules/mixin-parallax';
 
 .parallax {
    perspective: 1px;
@@ -8,6 +9,9 @@
    height: 100vh;
    position: relative;
    left: 0;
+   transition-property: left;
+   @include transition(.3s, $pullCurveAnimation, .3s);
+   
    // width: 100%;
    &::-webkit-scrollbar {
       // width: 0;

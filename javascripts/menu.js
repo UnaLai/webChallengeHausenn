@@ -50,7 +50,6 @@ var menuContactAnimate = function(){
     contactPage.classList.add(openAllClass);
     wholePage.classList.add(openAllClass);
     menuIcon.classList.add(openAllClass);
-
     nav.classList.add(activeContactClass);
 
   });
