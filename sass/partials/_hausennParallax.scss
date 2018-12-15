@@ -5,7 +5,7 @@
 .hausennFashion {
    // height: 100vh;
    @extend %container--fixed;
-   overflow-x: hidden;
+   // overflow-x: hidden;
    &::-webkit-scrollbar {
       width: 0;
    }

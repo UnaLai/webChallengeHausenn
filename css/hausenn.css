@@ -924,9 +924,6 @@ footer .footerCopyright__sign {
   right: 0;
 }
 
-.hausennFashion {
-  overflow-x: hidden;
-}
 .hausennFashion::-webkit-scrollbar {
   width: 0;
 }

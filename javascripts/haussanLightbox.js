@@ -6,24 +6,31 @@ const blockSewing = document.querySelector('.blockSewing');
 const blockCouture = document.querySelector('.blockCouture');
 const blockCollections = document.querySelector('.blockCollections');
 const blockSeasons= document.querySelector('.blockSeasons');
+const wholePage = document.querySelector('#wholePage');
 
+//.appear
 blockSewing.addEventListener('click',function(){
     hausennFashionShow.classList.add('moveToPage');
+    wholePage.classList.add('appear');
 })
 blockCouture.addEventListener('click',function(){
     hausennFashionShow.classList.add('moveToPage');
+    wholePage.classList.add('appear');
 })
 blockCollections.addEventListener('click',function(){
     hausennFashionShow.classList.add('moveToPage');
+    wholePage.classList.add('appear');
 })
 blockSeasons.addEventListener('click',function(){
     hausennFashionShow.classList.add('moveToPage');
+    wholePage.classList.add('appear');
 })
 
 //離開畫面
 const closeHausennFashionShow = document.querySelector('.hausennFashionShowClose');
 closeHausennFashionShow.addEventListener("click",function(){
   hausennFashionShow.classList.remove('moveToPage');
+  wholePage.classList.remove('appear');
 });
 
 // 點擊項目打開ul選單
