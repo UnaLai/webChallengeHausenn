@@ -17,6 +17,7 @@
    transition-property: right;
    transition-duration: 0.5s;
    transition-timing-function: cubic-bezier(0.4, 0, 1, 0.54);
+   z-index: 3;
    @include mediaquery_ipadpro {
       flex-direction: column;
       align-items: center;

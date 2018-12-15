@@ -634,6 +634,13 @@ a {
   -o-transition-delay: 0.3s;
 }
 
+.concept {
+  margin-top: 30px;
+  overflow-x: hidden;
+}
+.concept::-webkit-scrollbar {
+  width: 0;
+}
 .concept .title {
   margin: 50px auto 175px;
   background-image: url("../images/kerway/banner_title.png");
@@ -1152,4 +1159,8 @@ footer .footerCopyright {
 footer .footerCopyright__sign {
   font-family: initial;
   font-size: .85rem;
+}
+
+body {
+  overflow-x: hidden;
 }

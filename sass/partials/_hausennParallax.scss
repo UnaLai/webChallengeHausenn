@@ -3,8 +3,12 @@
 @import './modules/_mixin-parallax.scss';
 
 .hausennFashion {
-   height: 100vh;
+   // height: 100vh;
    @extend %container--fixed;
+   overflow-x: hidden;
+   &::-webkit-scrollbar {
+      width: 0;
+   }
    .hausennTitle {
       margin: 50px auto 173px;
       background-image: url("../images/hausenn/banner_title 2.png");
@@ -120,6 +124,7 @@
    .blockSewing {
       height: 570px;
       margin-top: 160px;
+      cursor: pointer;
       @include mediaquery_ipadpro {
          margin-top: 100px;
          height: 390px;
@@ -167,6 +172,7 @@
    }
    .blockCouture {
       height: 732px;
+      cursor: pointer;
       @include mediaquery_ipadpro {
          margin-top: 100px;
          height: 281px;
@@ -220,6 +226,7 @@
    .blockCollections {
       height: 760px;
       margin-top: 100px;
+      cursor: pointer;
       @include mediaquery_ipadpro {
          height: 160px;
       }
@@ -271,6 +278,8 @@
    }
    .blockSeasons {
       height: 921px;
+      margin-bottom: 250px;
+      cursor: pointer;
       @include mediaquery_ipadpro {
          height: 370px;
       }

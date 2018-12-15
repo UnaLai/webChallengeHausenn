@@ -1,3 +1,30 @@
+//控制畫面
+const hausennFashionShow = document.querySelector('.hausennFashionShow');
+
+//進入畫面
+const blockSewing = document.querySelector('.blockSewing');
+const blockCouture = document.querySelector('.blockCouture');
+const blockCollections = document.querySelector('.blockCollections');
+const blockSeasons= document.querySelector('.blockSeasons');
+
+blockSewing.addEventListener('click',function(){
+    hausennFashionShow.classList.add('moveToPage');
+})
+blockCouture.addEventListener('click',function(){
+    hausennFashionShow.classList.add('moveToPage');
+})
+blockCollections.addEventListener('click',function(){
+    hausennFashionShow.classList.add('moveToPage');
+})
+blockSeasons.addEventListener('click',function(){
+    hausennFashionShow.classList.add('moveToPage');
+})
+
+//離開畫面
+const closeHausennFashionShow = document.querySelector('.hausennFashionShowClose');
+closeHausennFashionShow.addEventListener("click",function(){
+  hausennFashionShow.classList.remove('moveToPage');
+});
 
 // 點擊項目打開ul選單
 //couture
@@ -91,11 +118,4 @@ controlLeft.addEventListener("click", function(){
 });
 controlRight.addEventListener("click", function(){
     imageContainer.classList.add('containerToRight');
-});
-
-//離開畫面
-const hausennFashionShow = document.querySelector('.hausennFashionShow');
-const closeHausennFashionShow = document.querySelector('.hausennFashionShowClose');
-closeHausennFashionShow.addEventListener("click",function(){
-  hausennFashionShow.classList.remove('moveToPage');
 });

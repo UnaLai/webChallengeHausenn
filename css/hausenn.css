@@ -712,6 +712,7 @@ footer .footerCopyright__sign {
   transition-property: right;
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(0.4, 0, 1, 0.54);
+  z-index: 3;
 }
 @media all and (max-width: 1024px) {
   .hausennFashionShow {
@@ -924,7 +925,10 @@ footer .footerCopyright__sign {
 }
 
 .hausennFashion {
-  height: 100vh;
+  overflow-x: hidden;
+}
+.hausennFashion::-webkit-scrollbar {
+  width: 0;
 }
 .hausennFashion .hausennTitle {
   margin: 50px auto 173px;
@@ -1057,6 +1061,7 @@ footer .footerCopyright__sign {
 .hausennFashion .blockSewing {
   height: 570px;
   margin-top: 160px;
+  cursor: pointer;
 }
 @media all and (max-width: 1024px) {
   .hausennFashion .blockSewing {
@@ -1112,6 +1117,7 @@ footer .footerCopyright__sign {
 }
 .hausennFashion .blockCouture {
   height: 732px;
+  cursor: pointer;
 }
 @media all and (max-width: 1024px) {
   .hausennFashion .blockCouture {
@@ -1172,6 +1178,7 @@ footer .footerCopyright__sign {
 .hausennFashion .blockCollections {
   height: 760px;
   margin-top: 100px;
+  cursor: pointer;
 }
 @media all and (max-width: 1024px) {
   .hausennFashion .blockCollections {
@@ -1230,6 +1237,8 @@ footer .footerCopyright__sign {
 }
 .hausennFashion .blockSeasons {
   height: 921px;
+  margin-bottom: 250px;
+  cursor: pointer;
 }
 @media all and (max-width: 1024px) {
   .hausennFashion .blockSeasons {
@@ -1360,5 +1369,5 @@ footer .footerCopyright__sign {
 }
 
 body {
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
