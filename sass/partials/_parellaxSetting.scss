@@ -11,10 +11,10 @@
    left: 0;
    transition-property: left;
    @include transition(.3s, $pullCurveAnimation, .3s);
-   
+
    // width: 100%;
    &::-webkit-scrollbar {
-      // width: 0;
+      width: 0;
    }
    &__group {
       position: relative;

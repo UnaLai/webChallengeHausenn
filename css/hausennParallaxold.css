@@ -102,6 +102,9 @@ body {
   -o-transition-timing-function: cubic-bezier(0.4, 0, 1, 0.54);
   -o-transition-delay: 0.3s;
 }
+.parallax::-webkit-scrollbar {
+  width: 0;
+}
 .parallax__group {
   position: relative;
   transform-style: preserve-3d;

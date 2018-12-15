@@ -106,12 +106,77 @@ a {
     transform: translateY(0px);
   }
 }
+.hausennFashion {
+  margin: 0 100px;
+  max-width: 100%;
+}
+@media all and (max-width: 375px) {
+  .hausennFashion {
+    margin: 0 20px;
+    max-width: 356.25px;
+  }
+}
+@media all and (max-width: 768px) {
+  .hausennFashion {
+    max-width: 614.4px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion {
+    max-width: 819.2px;
+  }
+}
+@media all and (max-width: 1366px) {
+  .hausennFashion {
+    max-width: 1092.8px;
+  }
+}
+
 .menu .menuNav, .menu .menuNavTop__mainBrand, .menu .menuNavTop__subBrand, .menu .menuNavMiddle a img, .menu .menuNavBottom__socialMedia {
   transform: translateX(-590px);
 }
 
 .menu.menuAppear, .menu.menuAppear .menuNav, .menu.menuAppear .menuNavTop__mainBrand, .menu.menuAppear .menuNavTop__subBrand, .menu.menuAppear .menuNavMiddle a img, .menu.menuAppear .menuNavBottom .menuNavBottom__socialMedia {
   transform: translateX(0);
+}
+
+.hausennFashion .blockCouture__title, .hausennFashion .blockCollections__title, .hausennFashion .blockSeasons__title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
+  letter-spacing: 4pt;
+  line-height: 49px;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCouture__title, .hausennFashion .blockCollections__title, .hausennFashion .blockSeasons__title {
+    font-size: 18px;
+    letter-spacing: 2pt;
+  }
+}
+
+.hausennFashion .blockCouture__custom, .hausennFashion .blockCollections__custom, .hausennFashion .blockSeasons__custom {
+  width: 100px;
+  height: 137px;
+  padding: 10px;
+  font-size: 10px;
+  letter-spacing: 2pt;
+  border: 1px solid black;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCouture__custom, .hausennFashion .blockCollections__custom, .hausennFashion .blockSeasons__custom {
+    border: none;
+  }
+}
+
+.hausennFashion .blockCouture__separate, .hausennFashion .blockCollections__separate, .hausennFashion .blockSeasons__separate {
+  width: 135px;
+  height: 28px;
+  background-color: black;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCouture__separate, .hausennFashion .blockCollections__separate, .hausennFashion .blockSeasons__separate {
+    width: 37px;
+    height: 7px;
+  }
 }
 
 .menu {
@@ -633,6 +698,618 @@ footer .footerCopyright__sign {
   font-size: .85rem;
 }
 
+.hausennFashionShow {
+  width: 100%;
+  height: 100vh;
+  background-color: #F5EEF1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  transition-property: right;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 0.54);
+}
+@media all and (max-width: 1024px) {
+  .hausennFashionShow {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+.hausennFashionShow .hausennFashionShowClose {
+  font-size: 20px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.hausennFashionShow__menu {
+  width: 25vw;
+  padding-top: 15vh;
+  padding-left: 30px;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashionShow__menu {
+    width: 80vw;
+  }
+}
+.hausennFashionShow__menu__sort {
+  font-family: 'Open Sans', sans-serif;
+}
+.hausennFashionShow__menu__sort__title {
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+.hausennFashionShow__menu__sort__title:hover {
+  opacity: 0.4;
+}
+.hausennFashionShow__menu__sort__mainmenu {
+  display: none;
+  padding-left: 10px;
+  margin: 10px 0;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashionShow__menu__sort__mainmenu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+    margin: 10px 0 0;
+  }
+}
+.hausennFashionShow__menu__sort__mainmenu__item__title {
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 3px;
+  line-height: 18px;
+  cursor: pointer;
+}
+.hausennFashionShow__menu__sort__mainmenu__item__title:hover {
+  opacity: 0.4;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashionShow__menu__sort__mainmenu__item__title {
+    line-height: 30px;
+  }
+}
+.hausennFashionShow__menu__sort__mainmenu__item__submenu {
+  display: none;
+  margin: 10px 0;
+}
+.hausennFashionShow__menu__sort__mainmenu__item__submenu li {
+  padding-left: 41px;
+  line-height: 18px;
+  cursor: pointer;
+}
+.hausennFashionShow__menu__sort__mainmenu__item__submenu li:hover {
+  opacity: 0.4;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashionShow__menu__sort__mainmenu__item__submenu li {
+    padding-left: 0;
+  }
+}
+.hausennFashionShow__menu__sort .activeItem {
+  opacity: 0.4;
+}
+.hausennFashionShow__lightbox {
+  width: 65vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashionShow__lightbox {
+    width: 80vw;
+  }
+}
+.hausennFashionShow__lightbox__expand {
+  display: flex;
+  width: 60vw;
+  height: 75vh;
+  overflow-x: hidden;
+  padding: 10vh 2vw 0;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashionShow__lightbox__expand {
+    padding: 8vh 1vw 0;
+    width: 70vw;
+    height: 40vh;
+  }
+}
+.hausennFashionShow__lightbox__expand img {
+  height: 60vh;
+  width: 58vw;
+  object-fit: cover;
+  object-position: 50% 50%;
+  display: none;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashionShow__lightbox__expand img {
+    width: 68vw;
+    height: 30vh;
+  }
+}
+.hausennFashionShow__lightbox__expand .displaySlide {
+  display: block;
+}
+.hausennFashionShow__lightbox__controlLeft {
+  position: absolute;
+  bottom: 17vh;
+  left: -2vw;
+  font-size: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashionShow__lightbox__controlLeft {
+    bottom: -13vh;
+    left: -7vw;
+    font-size: 25px;
+  }
+}
+.hausennFashionShow__lightbox__controlRight {
+  position: absolute;
+  bottom: 17vh;
+  right: -2vw;
+  font-size: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashionShow__lightbox__controlRight {
+    bottom: -13vh;
+    right: -7vw;
+    font-size: 25px;
+  }
+}
+.hausennFashionShow__lightbox__choose {
+  height: 15vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashionShow__lightbox__choose {
+    position: absolute;
+    bottom: -23vh;
+  }
+}
+.hausennFashionShow__lightbox__choose__container {
+  display: flex;
+  transition: transform 1s;
+  transform: translateX(0);
+}
+.hausennFashionShow__lightbox__choose img {
+  width: 10vw;
+  height: 10vh;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 1vw;
+  -webkit-filter: brightness(0.5);
+}
+.hausennFashionShow__lightbox__choose img:hover {
+  -webkit-filter: brightness(1);
+}
+@media all and (max-width: 1024px) {
+  .hausennFashionShow__lightbox__choose img {
+    width: 15vw;
+    margin-right: 1.25vw;
+    height: 5vh;
+  }
+}
+.hausennFashionShow__lightbox__choose .activeImg {
+  -webkit-filter: brightness(1);
+}
+
+.menucontrolOpen {
+  display: block;
+}
+
+.containerToRight {
+  transform: translateX(-101%);
+}
+
+.moveToPage {
+  right: 0;
+}
+
+.hausennFashion {
+  height: 100vh;
+}
+.hausennFashion .hausennTitle {
+  margin: 50px auto 173px;
+  background-image: url("../images/hausenn/banner_title 2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 200px;
+  height: 32px;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .hausennTitle {
+    margin: 50px auto;
+    width: 125px;
+    height: 20px;
+  }
+}
+.hausennFashion .blockImpression {
+  height: calc(411px + 95px + 292px);
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockImpression {
+    height: 230px;
+  }
+}
+@media all and (max-width: 375px) {
+  .hausennFashion .blockImpression {
+    height: 113px;
+  }
+}
+.hausennFashion .blockImpression .parallax__baselayer {
+  position: relative;
+  top: 50%;
+  left: 50%;
+}
+.hausennFashion .blockImpression__title {
+  width: 46%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 35px;
+  letter-spacing: 4pt;
+  line-height: 49px;
+  color: #000;
+  transform: translate(-50%, -50%);
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockImpression__title {
+    display: none;
+  }
+}
+.hausennFashion .blockImpression__model {
+  background-image: url("../images/hausenn/banner_img1 2.png");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 411px;
+  position: absolute;
+  top: -240px;
+  left: 0;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockImpression__model {
+    top: -70px;
+    height: 230px;
+  }
+}
+@media all and (max-width: 768px) {
+  .hausennFashion .blockImpression__model {
+    top: -65px;
+    height: 180px;
+  }
+}
+@media all and (max-width: 375px) {
+  .hausennFashion .blockImpression__model {
+    top: -64px;
+    height: 113px;
+  }
+}
+.hausennFashion .blockImpression__dress {
+  background-image: url("../images/hausenn/banner_img2.png");
+  background-position: center;
+  background-size: cover;
+  width: 570px;
+  height: 292px;
+  position: absolute;
+  top: 285px;
+  left: 4%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockImpression__dress {
+    display: none;
+  }
+}
+.hausennFashion .blockImpression__back {
+  width: 80%;
+  height: 28vw;
+  background-color: #efeceb;
+  position: absolute;
+  top: -80px;
+  left: 0;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockImpression__back {
+    top: -35px;
+  }
+}
+@media all and (max-width: 768px) {
+  .hausennFashion .blockImpression__back {
+    top: 20px;
+  }
+}
+@media all and (max-width: 375px) {
+  .hausennFashion .blockImpression__back {
+    top: -35px;
+  }
+}
+.hausennFashion .blockImpression__text {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  letter-spacing: 3pt;
+  line-height: 27px;
+  position: absolute;
+  top: 345px;
+  right: 7%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockImpression__text {
+    display: none;
+  }
+}
+.hausennFashion .blockSewing {
+  height: 570px;
+  margin-top: 160px;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockSewing {
+    margin-top: 100px;
+    height: 390px;
+  }
+}
+.hausennFashion .blockSewing__title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 25px;
+  letter-spacing: 4pt;
+  line-height: 40px;
+  color: #000;
+  transform: translate(25%, 180%);
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockSewing__title {
+    font-size: 14px;
+    letter-spacing: 2pt;
+    transform: translate(0, 70%);
+  }
+}
+.hausennFashion .blockSewing__separate {
+  width: 55px;
+  height: 7px;
+  background-color: black;
+  position: absolute;
+  top: 110px;
+  left: 25%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockSewing__separate {
+    left: 0;
+    top: 15px;
+  }
+}
+.hausennFashion .blockSewing__text {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  letter-spacing: 3pt;
+  line-height: 27px;
+  position: absolute;
+  top: 80px;
+  right: 5%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockSewing__text {
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.hausennFashion .blockCouture {
+  height: 732px;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCouture {
+    margin-top: 100px;
+    height: 281px;
+  }
+}
+.hausennFashion .blockCouture__title {
+  text-align: right;
+  transform: translate(-10%, 110%);
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCouture__title {
+    transform: translate(-5%, 80%);
+  }
+}
+.hausennFashion .blockCouture__custom {
+  position: absolute;
+  right: 12%;
+  top: 120px;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCouture__custom {
+    right: -8%;
+    top: 75px;
+  }
+}
+.hausennFashion .blockCouture__separate {
+  position: absolute;
+  right: 11%;
+  top: 320px;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCouture__separate {
+    right: 6%;
+    top: 120px;
+  }
+}
+.hausennFashion .blockCouture__pic {
+  width: 90%;
+  position: absolute;
+  top: -100px;
+  right: 4%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCouture__pic {
+    top: -75px;
+  }
+}
+.hausennFashion .blockCouture__back {
+  width: 36%;
+  height: 33vw;
+  background-color: #efeceb;
+  position: absolute;
+  top: -90px;
+  right: 4%;
+}
+.hausennFashion .blockCollections {
+  height: 760px;
+  margin-top: 100px;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCollections {
+    height: 160px;
+  }
+}
+.hausennFashion .blockCollections__title {
+  position: absolute;
+  top: 220px;
+  left: 7%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCollections__title {
+    top: 25px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCollections__custom {
+    transform: translate(17%, 42%);
+  }
+}
+.hausennFashion .blockCollections__separate {
+  position: absolute;
+  left: 7%;
+  top: 410px;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCollections__separate {
+    top: 100px;
+  }
+}
+.hausennFashion .blockCollections__pic {
+  width: 35vw;
+  position: absolute;
+  top: -74px;
+  left: 11%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCollections__pic {
+    top: -130px;
+    left: 10%;
+  }
+}
+.hausennFashion .blockCollections__back {
+  width: 36vw;
+  height: 30vw;
+  background-color: #efeceb;
+  position: absolute;
+  top: -220px;
+  left: 2%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockCollections__back {
+    top: -180px;
+  }
+}
+.hausennFashion .blockSeasons {
+  height: 921px;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockSeasons {
+    height: 370px;
+  }
+}
+.hausennFashion .blockSeasons__title {
+  position: relative;
+  top: 455px;
+  left: 36%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockSeasons__title {
+    top: 0;
+    left: 37%;
+  }
+}
+.hausennFashion .blockSeasons__custom {
+  position: relative;
+  top: 390px;
+  left: 48%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockSeasons__custom {
+    top: 162px;
+    left: 35%;
+  }
+}
+.hausennFashion .blockSeasons__separate {
+  position: relative;
+  top: 417px;
+  right: -87%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockSeasons__separate {
+    left: 37%;
+    top: 12px;
+    right: -40%;
+  }
+}
+.hausennFashion .blockSeasons__back {
+  width: 13vw;
+  height: 16vw;
+  background-color: #efeceb;
+  position: absolute;
+  top: 200px;
+  right: 30%;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockSeasons__back {
+    top: -24px;
+  }
+}
+.hausennFashion .blockSeasons__pic {
+  width: 33vw;
+  height: 42vw;
+  position: absolute;
+  top: -170px;
+  right: 3%;
+  z-index: 4;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockSeasons__pic {
+    top: -115px;
+  }
+}
+.hausennFashion .blockSeasons__background {
+  width: 54vw;
+  height: 43vw;
+  position: absolute;
+  z-index: 2;
+  right: 24%;
+  top: 110px;
+}
+@media all and (max-width: 1024px) {
+  .hausennFashion .blockSeasons__background {
+    top: 40px;
+  }
+}
+
 .parallax {
   perspective: 1px;
   overflow-x: hidden;
@@ -650,6 +1327,9 @@ footer .footerCopyright__sign {
   -o-transition-duration: 0.3s;
   -o-transition-timing-function: cubic-bezier(0.4, 0, 1, 0.54);
   -o-transition-delay: 0.3s;
+}
+.parallax::-webkit-scrollbar {
+  width: 0;
 }
 .parallax__group {
   position: relative;
@@ -677,4 +1357,8 @@ footer .footerCopyright__sign {
   -o-transition-duration: 0.3s;
   -o-transition-timing-function: cubic-bezier(0.4, 0, 1, 0.54);
   -o-transition-delay: 0.3s;
+}
+
+body {
+  overflow-y: hidden;
 }

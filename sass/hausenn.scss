@@ -6,4 +6,10 @@
 @import './partials/menu';
 @import './partials/contact';
 @import './partials/footer';
+@import './partials/_lightbox.scss';
+@import './partials/_hausennParallax.scss';
 @import './partials/parellaxSetting';
+
+body {
+   overflow-y: hidden;
+}
