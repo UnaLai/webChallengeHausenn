@@ -1,5 +1,6 @@
 var kerwayPhotoClick = (function (){
-  var masonryLayoutItem = document.getElementsByClassName('MasonryLayoutItem'),
+
+  var masonryLayoutItem = document.getElementsByClassName('tile'),
   wholePage = document.getElementById('wholePage'),
   kerwayWork = document.getElementById('kerwayWork'),
   photoContainer = document.getElementById('photoContainer'),
@@ -9,12 +10,8 @@ var kerwayPhotoClick = (function (){
   // console.log (masonryLayoutItem);
 
   for (var i=0; i < masonryLayoutItem.length; i++) {
-    //全部
-    var imgBox = masonryLayoutItem[i],
-        imgSrc = imgBox.children[0].getAttribute('src');
+    var imgBox = masonryLayoutItem[i];
 
-    // console.log(imgBox, imgSrc);
-    
     imgBox.addEventListener("click", function(){
       wholePage.classList.add('appear');
       kerwayWork.classList.add('appear');
@@ -25,8 +22,4 @@ var kerwayPhotoClick = (function (){
     });
   }
 
-  controlPrevious.addEventListener("click", function(){});
-  controlNext.addEventListener("click", function(){});
-
 })();
-

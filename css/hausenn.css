@@ -627,6 +627,11 @@ footer {
   line-height: 1.6rem;
   text-transform: uppercase;
 }
+@media all and (max-width: 768px) {
+  footer {
+    padding: 75px 20px 65px;
+  }
+}
 footer.haussenFooter {
   background: #decbc4;
 }

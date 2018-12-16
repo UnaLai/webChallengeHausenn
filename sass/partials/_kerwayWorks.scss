@@ -1,152 +1,212 @@
-.kerwayWorks{
+@import "../modules/mixinMediaquery.scss";
+
+.kerwayWorks {
 	background-color: #000;
+	min-height: 100vh;
 }
-.kerwayWorksTitel{
+
+.kerwayWorksTitel {
 	box-sizing: border-box;
-	padding: 50px 0px;
+	padding: 50px 0;
 }
-.kerwayWorksTitel > img{
+
+.kerwayWorksTitel > img {
 	width: 192px;
 	height: 32px;
 	margin: 0 auto;
 }
-.kerwayFilterTitel{
+
+.kerwayFilterTitel {
 	margin-left: 50px;
-	@include mediaquery_phone{
+	@include mediaquery_phone {
 		margin-left: 10px;
 	}
 }
-.kerwayFilterTitel > div:nth-child(1){
+
+.kerwayFilterTitel > div:nth-child(1) {
 	width: 150px;
 	height: 16px;
 	background: #fff;
 	margin-bottom: 30px;
 }
-.kerwayFilterTitel > div:nth-child(2){
+
+.kerwayFilterTitel > div:nth-child(2) {
 	font-size: 40px;
 	font-family: Open;
-	text-transform: uppercase;
 	letter-spacing: 4px;
 	color: #fff;
 	margin-bottom: 30px;
+	@include mediaquery_phone {
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
 }
-.kerwayFilterTitel > div:nth-child(3){
+
+.kerwayFilterTitel > div:nth-child(3) {
 	font-size: 32px;
 	font-family: Noto;
 	letter-spacing: 4px;
 	color: #fff;
+	@include mediaquery_phone {
+		font-size: 22px;
+	}
 }
 
-#MasonryLayout{
+#MasonryLayout {
 	margin: 0 100px;
 	z-index: 1;
-	@include mediaquery_phone{
+	@include mediaquery_phone {
 		margin: 0 10px;
 	}
 }
-.MasonryLayoutItem{
-	width:350px;
+
+.MasonryLayoutItem {
+	width: 350px;
 	margin-bottom: 50px;
 	overflow: hidden;
 }
-.MasonryLayoutItem > img{
+
+.MasonryLayoutItem > img {
 	width: 100%;
 }
 
-
-.filter{
-	position: fixed;
-	bottom: 0vh;
+#filter {
+	position: sticky;
+	bottom: 0;
 	z-index: 2;
 	width: 100%;
-  background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.5);
 	color: #fff;
 	padding: 15px 50px 15px 100px;
 	font-weight: 200;
 	letter-spacing: 4px;
-	opacity: 1;
-	display: block;
-	&.appear {
-		opacity: 0;
-		display: none;
-	}
-	@include mediaquery_phone{
-		padding: 15px 10px 15px 10px;
+	@include mediaquery_phone {
+		padding: 15px 10px;
 	}
 }
-.filter > a:first-child{
+
+#filter > a:first-child {
 	color: #fff;
 }
-.nineGrid{
+
+.nineGrid {
 	float: left;
-	@include mediaquery_phone{
+	@include mediaquery_phone {
 		display: none;
 	}
 }
-.arrowUp{
+
+.arrowUp {
 	float: right;
 }
-.nineGrid,.arrowUp{
+
+.arrowUp,
+.nineGrid {
 	font-size: 24px;
 }
-center{
+
+center {
 	position: relative;
 }
-.kerwayList{
+
+.kerwayList {
 	width: 176px;
 	display: flex;
 	flex-direction: column;
 	position: absolute;
 	z-index: 4;
-	@include mediaquery_phone{
+	@include mediaquery_phone {
 		width: 90px;
 	}
 }
-#work{
+
+#work {
 	bottom: -86px;
 	right: 542px;
 	transition: bottom 0.5s;
-	@include mediaquery_phone{
-		// right: 215px;
-		left: 210px;
-	}
-}
-#photographer{
-	bottom: -64px;
-	right: 321px;
-	transition: bottom 0.3s;
-	@include mediaquery_phone{
-		// right: 125px;
-		left: 110px;
-	}
-}
-#fashionStylist{
-	bottom: -64px;
-	right: 100px;
-	transition: bottom 0.5s;
-	@include mediaquery_phone{
+	@include mediaquery_phone {
 		left: 10px;
 	}
 }
-#work:hover,#photographer:hover,#fashionStylist:hover{
+
+#photographer {
+	bottom: -64px;
+	-moz-bottom: -52px;
+	right: 321px;
+	transition: bottom 0.3s;
+	@include mediaquery_phone {
+		left: 110px;
+	}
+}
+
+#fashionStylist {
+	bottom: -64px;
+	-moz-bottom: -52px;
+	right: 100px;
+	transition: bottom 0.5s;
+	@include mediaquery_phone {
+		left: 210px;
+	}
+}
+
+#fashionStylist:hover,
+#photographer:hover,
+#work:hover {
 	bottom: 0;
 }
-.kerwayList > a{
+
+.kerwayList > a {
 	color: #000;
 	background-color: #fff;
 }
-.kerwayList > div:first-child{
+
+.kerwayList > div:first-child {
 	color: #fff;
 	background-color: rgba(0, 0, 0, 0);
 	padding: 15px 5px;
 }
-.kerwayList > a{
+
+.kerwayList > a {
 	visibility: hidden;
 }
-.kerwayList:hover > a{
+
+.kerwayList:hover > a {
 	visibility: visible;
 	padding: 2px 5px;
 }
-.kerwayList:hover > a:hover{
+
+.kerwayList:hover > a:hover {
 	background-color: gray;
+}
+
+#portfolio {
+	margin: 0 100px;
+	// -webkit-column-count: 3;
+	// -moz-column-count: 3;
+	column-count: 3;
+	// -webkit-column-gap: 50px;
+	// -moz-column-gap: 50px;
+	column-gap: 50px;
+	// -webkit-column-width: 33.33333333333333%;
+	// -moz-column-width: 33.33333333333333%;
+	column-width: 33.33333333333333%;
+	@include mediaquery_phone {
+		margin: 0 10px;
+		column-count: 1;
+	}
+}
+.tile {
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition: all 350ms ease;
+	transition: all 350ms ease;
+}
+.scale-anm {
+	transform: scale(1);
+}
+.tile img {
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+	margin-bottom: 50px;
 }
