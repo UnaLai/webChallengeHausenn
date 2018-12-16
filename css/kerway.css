@@ -677,7 +677,7 @@ a {
   background-size: cover;
   position: absolute;
   top: 0;
-  right: 30%;
+  right: 18%;
 }
 @media all and (max-width: 1024px) {
   .concept .secondaryPicTop {
@@ -690,10 +690,11 @@ a {
   font-size: 12pt;
   line-height: 24pt;
   letter-spacing: 2pt;
-  width: 325px;
+  width: 360px;
   position: relative;
   top: 360px;
   left: 70px;
+  text-align: justify;
 }
 @media all and (max-width: 1024px) {
   .concept .secondaryArticle {
@@ -740,7 +741,7 @@ a {
 .concept .secondaryPicSecond {
   position: absolute;
   top: -650px;
-  right: 10%;
+  right: 0%;
   width: 390px;
   height: 520px;
   background-image: url("../images/kerway/banner_img42.png");
@@ -788,7 +789,7 @@ a {
 .concept .secondarySubtitle {
   position: relative;
   top: -550px;
-  left: 310px;
+  left: 330px;
   width: 150px;
   font-size: 19pt;
   line-height: 38pt;
@@ -806,7 +807,7 @@ a {
 }
 .concept .secondarySeparate {
   position: absolute;
-  top: -360px;
+  top: -336px;
   left: 0;
   width: 36px;
   height: 4px;
@@ -822,7 +823,7 @@ a {
 .concept .secondaryPicBottom {
   position: absolute;
   top: -540px;
-  right: -5%;
+  right: -15%;
   width: 390px;
   height: 520px;
   background-image: url("../images/kerway/banner_img43.png");
@@ -895,6 +896,16 @@ a {
   .secondaryTextBaselayer {
     height: 200px;
   }
+}
+
+@media all and (max-width: 1024px) {
+  .secondary__text {
+    height: 600px;
+  }
+}
+
+.welcome {
+  z-index: 50;
 }
 
 .kerwayWorks {
