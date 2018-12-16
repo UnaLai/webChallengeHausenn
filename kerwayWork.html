@@ -65,7 +65,7 @@
     <h2>Contact Page</h2>
     <h3>Lai, Mango, Askie</h3>
   </section>
-  <section class="filter" id="filter" style="display:none;">
+  <section class="filter" id="filter">
     <a class="arrowUp" href="#kerwayWorksTop"><i class="fas fa-arrow-up"></i></a>
     <a class="nineGrid"><i class="fas fa-th"></i></a>
     <center></center>
@@ -91,12 +91,12 @@
       </div>
     </div>
   </section>
-  <section class="kerwayWork">
+  <section class="kerwayWork" id="kerwayWork">
     <div class="kerwayWork__photoBox">
-      <img src="./images/kerway/Y6040melody.jpg" alt="" class="kerwayWork__photo">
+      <img src="" alt="" class="kerwayWork__photo" id="photoContainer">
       <div class="kerwayWork__controlBox">
-          <div class="kerwayWork__previous"></div>
-          <div class="kerwayWork__next"></div>
+          <div class="kerwayWork__previous" id="controlPrevious"></div>
+          <div class="kerwayWork__next" id="controlNext"></div>
       </div>
       <div class="kerwayWork__shareBox">
         <div><i class="fas fa-share-alt"></i></div>
@@ -244,6 +244,7 @@
     </footer>
   </div>
   <script src="./javascripts/menu.js"></script>
+  <script src="./javascripts/kerwayWork.js"></script>
 </body>
 
 </html>
