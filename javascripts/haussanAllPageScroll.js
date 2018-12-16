@@ -106,3 +106,12 @@ function upmove(current, upBreakPoint) {
 }
 
 parallax.addEventListener('scroll', pagemove);
+
+//welcome裏面的箭頭事件也要綁定全頁滾動
+const arrow = document.querySelector('.arrow');
+arrow.addEventListener('click', function(){
+  current=hausennWelcome;
+  onethingdo = "down";
+  downBreakPoint = current.offsetTop + current.clientHeight;
+  downmove(current, downBreakPoint);
+});
