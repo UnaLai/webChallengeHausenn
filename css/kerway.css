@@ -1006,9 +1006,10 @@ a {
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
-  padding: 15px 50px 15px 100px;
+  padding: 10px 50px 10px 100px;
   font-weight: 200;
   letter-spacing: 4px;
+  overflow: hidden;
 }
 @media all and (max-width: 375px) {
   #filter {
@@ -1056,7 +1057,7 @@ center {
 }
 
 #work {
-  bottom: -86px;
+  bottom: -87px;
   right: 542px;
   transition: bottom 0.5s;
 }
@@ -1067,7 +1068,7 @@ center {
 }
 
 #photographer {
-  bottom: -64px;
+  bottom: -65px;
   -moz-bottom: -52px;
   right: 321px;
   transition: bottom 0.3s;
@@ -1079,7 +1080,7 @@ center {
 }
 
 #fashionStylist {
-  bottom: -64px;
+  bottom: -65px;
   -moz-bottom: -52px;
   right: 100px;
   transition: bottom 0.5s;
