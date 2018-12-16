@@ -923,11 +923,12 @@ a {
 
 .kerwayWorks {
   background-color: #000;
+  min-height: 100vh;
 }
 
 .kerwayWorksTitel {
   box-sizing: border-box;
-  padding: 50px 0px;
+  padding: 50px 0;
 }
 
 .kerwayWorksTitel > img {
@@ -955,10 +956,15 @@ a {
 .kerwayFilterTitel > div:nth-child(2) {
   font-size: 40px;
   font-family: Open;
-  text-transform: uppercase;
   letter-spacing: 4px;
   color: #fff;
   margin-bottom: 30px;
+}
+@media all and (max-width: 375px) {
+  .kerwayFilterTitel > div:nth-child(2) {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
 }
 
 .kerwayFilterTitel > div:nth-child(3) {
@@ -966,6 +972,11 @@ a {
   font-family: Noto;
   letter-spacing: 4px;
   color: #fff;
+}
+@media all and (max-width: 375px) {
+  .kerwayFilterTitel > div:nth-child(3) {
+    font-size: 22px;
+  }
 }
 
 #MasonryLayout {
@@ -988,9 +999,9 @@ a {
   width: 100%;
 }
 
-.filter {
-  position: fixed;
-  bottom: 0vh;
+#filter {
+  position: sticky;
+  bottom: 0;
   z-index: 2;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
@@ -998,20 +1009,14 @@ a {
   padding: 15px 50px 15px 100px;
   font-weight: 200;
   letter-spacing: 4px;
-  opacity: 1;
-  display: block;
-}
-.filter.appear {
-  opacity: 0;
-  display: none;
 }
 @media all and (max-width: 375px) {
-  .filter {
-    padding: 15px 10px 15px 10px;
+  #filter {
+    padding: 15px 10px;
   }
 }
 
-.filter > a:first-child {
+#filter > a:first-child {
   color: #fff;
 }
 
@@ -1028,7 +1033,8 @@ a {
   float: right;
 }
 
-.nineGrid, .arrowUp {
+.arrowUp,
+.nineGrid {
   font-size: 24px;
 }
 
@@ -1056,12 +1062,13 @@ center {
 }
 @media all and (max-width: 375px) {
   #work {
-    left: 210px;
+    left: 10px;
   }
 }
 
 #photographer {
   bottom: -64px;
+  -moz-bottom: -52px;
   right: 321px;
   transition: bottom 0.3s;
 }
@@ -1073,16 +1080,19 @@ center {
 
 #fashionStylist {
   bottom: -64px;
+  -moz-bottom: -52px;
   right: 100px;
   transition: bottom 0.5s;
 }
 @media all and (max-width: 375px) {
   #fashionStylist {
-    left: 10px;
+    left: 210px;
   }
 }
 
-#work:hover, #photographer:hover, #fashionStylist:hover {
+#fashionStylist:hover,
+#photographer:hover,
+#work:hover {
   bottom: 0;
 }
 
@@ -1108,6 +1118,37 @@ center {
 
 .kerwayList:hover > a:hover {
   background-color: gray;
+}
+
+#portfolio {
+  margin: 0 100px;
+  column-count: 3;
+  column-gap: 50px;
+  column-width: 33.33333333333333%;
+}
+@media all and (max-width: 375px) {
+  #portfolio {
+    margin: 0 10px;
+    column-count: 1;
+  }
+}
+
+.tile {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 350ms ease;
+  transition: all 350ms ease;
+}
+
+.scale-anm {
+  transform: scale(1);
+}
+
+.tile img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
 }
 
 .kerwayWork {

@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <!-- 瀑布流套件-masonry -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script src="http://masonry.desandro.com/jquery.masonry.min.js"></script>
 
   <script src="./javascripts/kerwayWorks.js" defer></script>
 
@@ -23,7 +22,7 @@
   <nav class="menu" id="nav">
     <div class="switchIconBox" id="menuIcon">
       <span class="switchIcon"></span>
-      <span class="switchIcon"></span> 
+      <span class="switchIcon"></span>
     </div>
     <div class="menuNav">
       <div class="menuNavTop">
@@ -64,32 +63,6 @@
     </div>
     <h2>Contact Page</h2>
     <h3>Lai, Mango, Askie</h3>
-  </section>
-  <section class="filter" id="filter">
-    <a class="arrowUp" href="#kerwayWorksTop"><i class="fas fa-arrow-up"></i></a>
-    <a class="nineGrid"><i class="fas fa-th"></i></a>
-    <center></center>
-    <div id="kerwayListContainer">
-      <div id="work" class="kerwayList">
-        <div>工作項目</div>
-        <a href="#">靜態攝影</a>
-        <a href="#">獨立婚紗</a>
-        <a href="#">婚禮紀實</a>
-        <a href="#">商業攝影</a>
-      </div>
-      <div id="photographer" class="kerwayList">
-        <div>攝影師</div>
-        <a href="#">Lai</a>
-        <a href="#">Askie</a>
-        <a href="#">mango</a>
-      </div>
-      <div id="fashionStylist" class="kerwayList">
-        <div>造型師</div>
-        <a href="#">Lai</a>
-        <a href="#">Askie</a>
-        <a href="#">mango</a>
-      </div>
-    </div>
   </section>
   <section class="kerwayWork" id="kerwayWork">
     <div class="kerwayWork__photoBox">
@@ -176,59 +149,79 @@
       </div>
       <div class="kerwayFilterTitel">
         <div></div>
-        <div>works</div>
-        <div id="showFilterText">作品</div>
+        <div id="jsShowText">WORKS</div>
+        <div id="jsHiddenText">作品</div>
       </div>
-      <div id="MasonryLayout">
-        <template>
-          <div class="MasonryLayoutItem">
-            <img src="">
+      <div style="clear:both;"></div>
+      <div id="portfolio">
+        <div class="tile scale-anm filterAll filter1">
+          <img class="photothumb" src="./images/kerway/_MG_2209_momo.jpg">
+        </div>
+        <div class="tile scale-anm filterAll filter1">
+          <img class="photothumb" src="./images/kerway/_MG_5259_2_mina.jpg">
+        </div>
+        <div class="tile scale-anm filterAll filter2 filter5">
+          <img class="photothumb" src="./images/kerway/Y4734miu.jpg">
+        </div>
+        <div class="tile scale-anm filterAll filter2">
+          <img class="photothumb" src="./images/kerway/Y4240miu.jpg">
+        </div>
+        <div class="tile scale-anm filterAll filter2 filter6">
+          <img class="photothumb" src="./images/kerway/Y7916momo.jpg">
+        </div>
+        <div class="tile scale-anm filterAll filter3 filter7">
+          <img class="photothumb" src="./images/kerway/Y1802mina.jpg">
+        </div>
+        <div class="tile scale-anm filterAll filter3">
+          <img class="photothumb" src="./images/kerway/Y2240mina.jpg">
+        </div>
+        <div class="tile scale-anm filterAll filter3 filter8">
+          <img class="photothumb" src="./images/kerway/Y1778mina.jpg">
+        </div>
+        <div class="tile scale-anm filterAll filter4">
+          <img class="photothumb" src="./images/kerway/Y7806momo.jpg">
+        </div>
+        <div class="tile scale-anm filterAll filter4 filter9">
+          <img class="photothumb" src="./images/kerway/Y6184melody.jpg">
+        </div>
+        <div class="tile scale-anm filterAll filter3">
+          <img class="photothumb" src="./images/kerway/Y2260mina.jpg">
+        </div>
+        <div class="tile scale-anm filterAll filter4">
+          <img class="photothumb" src="./images/kerway/Y6040melody.jpg">
+        </div>
+        <div class="tile scale-anm filterAll filter4 filter10">
+          <img class="photothumb" src="./images/kerway/Melody_造型師.jpg">
+        </div>
+        <div class="tile scale-anm filterAll filter4">
+          <img class="photothumb" src="./images/kerway/banner_img43.png">
+        </div>
+      </div>
+      <div style="clear:both;"></div>
+      <div id="filter">
+        <a class="arrowUp" href="#kerwayWorksTop"><i class="fas fa-arrow-up"></i></a>
+        <a class="nineGrid fil-cat" data-rel="filterAll"><i class="fas fa-th"></i></a>
+        <center></center>
+        <div id="kerwayListContainer">
+          <div id="work" class="kerwayList">
+            <div>工作項目</div>
+            <a href="#" class="fil-cat" data-rel="filter1">靜態攝影</a>
+            <a href="#" class="fil-cat" data-rel="filter2">獨立婚紗</a>
+            <a href="#" class="fil-cat" data-rel="filter3">婚禮紀實</a>
+            <a href="#" class="fil-cat" data-rel="filter4">商業攝影</a>
           </div>
-        </template>
-        <div class="MasonryLayoutItem">
-          <img src="./images/kerway/_MG_2209_momo.jpg">
-        </div>
-        <div class="MasonryLayoutItem">
-          <img src="./images/kerway/_MG_5259_2_mina.jpg">
-        </div>
-        <div class="MasonryLayoutItem">
-          <img src="./images/kerway/Y4734miu.jpg">
-        </div>
-        <div class="MasonryLayoutItem">
-          <img src="./images/kerway/Y4240miu.jpg">
-        </div>
-        <div class="MasonryLayoutItem">
-          <img src="./images/kerway/Y7916momo.jpg">
-        </div>
-        <div class="MasonryLayoutItem">
-          <img src="./images/kerway/Y2260mina.jpg">
-        </div>
-        <div class="MasonryLayoutItem">
-          <img src="./images/kerway/Y1802mina.jpg">
-        </div>
-        <div class="MasonryLayoutItem">
-          <img src="./images/kerway/Y2240mina.jpg">
-        </div>
-        <div class="MasonryLayoutItem">
-          <img src="./images/kerway/Y1778mina.jpg">
-        </div>
-        <div class="MasonryLayoutItem">
-          <img src="./images/kerway/Y7806momo.jpg">
-        </div>
-        <div class="MasonryLayoutItem">
-          <img src="./images/kerway/Y6184melody.jpg">
-        </div>
-        <div class="MasonryLayoutItem">
-          <img src="./images/kerway/Y6040melody.jpg">
-        </div>
-        <div class="MasonryLayoutItem">
-          <img src="./images/kerway/Melody_造型師.jpg">
-        </div>
-        <div class="MasonryLayoutItem">
-          <img src="./images/kerway/banner_img43.png">
-        </div>
-        <div class="MasonryLayoutItem">
-          <img src="./images/kerway/banner_img41.png">
+          <div id="photographer" class="kerwayList">
+            <div>攝影師</div>
+            <a href="#" class="fil-cat" data-rel="filter5">Lai</a>
+            <a href="#" class="fil-cat" data-rel="filter6">Askie</a>
+            <a href="#" class="fil-cat" data-rel="filter7">mango</a>
+          </div>
+          <div id="fashionStylist" class="kerwayList">
+            <div>造型師</div>
+            <a href="#" class="fil-cat" data-rel="filter8">Lai</a>
+            <a href="#" class="fil-cat" data-rel="filter9">Askie</a>
+            <a href="#" class="fil-cat" data-rel="filter10">mango</a>
+          </div>
         </div>
       </div>
     </section>
