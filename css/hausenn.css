@@ -1308,6 +1308,10 @@ footer .footerCopyright__sign {
   }
 }
 
+.welcome {
+  z-index: 50;
+}
+
 .parallax {
   perspective: 1px;
   overflow-x: hidden;
