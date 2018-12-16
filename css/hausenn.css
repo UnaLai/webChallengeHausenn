@@ -696,9 +696,8 @@ footer .footerCopyright__sign {
   background-color: #F5EEF1;
   display: flex;
   justify-content: center;
-  position: relative;
   box-sizing: border-box;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: -100%;
   transition-property: right;
@@ -1401,4 +1400,5 @@ footer .footerCopyright__sign {
 
 body {
   overflow-x: hidden;
+  width: 100%;
 }
