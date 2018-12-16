@@ -55,3 +55,23 @@
      height: 7px;
    }
 }
+
+%PhotoControlBox {
+  padding: 55px 30px;
+  cursor: pointer;
+}
+
+%PhotoControler {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 20px;
+  background: #fff;
+}
+
+%PhotoControlerBefore {
+  top: 49px;
+}
+%PhotoControlerAfter {
+  top: 36px;
+}

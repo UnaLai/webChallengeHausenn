@@ -1,6 +1,7 @@
 @import '../modules/variablesBezier';
 @import '../modules/mixinTransition';
 @import '../modules/mixinWholePage';
+@import '../modules/extendClass';
 
 .kerwayWork {
   @include wholePageLayout;
@@ -26,26 +27,6 @@
     justify-content: space-between;
     width: 100%;
     padding: 0 85px;
-  }
-
-  %PhotoControlBox {
-    padding: 55px 30px;
-    cursor: pointer;
-  }
-
-  %PhotoControler {
-    content: '';
-    position: absolute;
-    width: 1px;
-    height: 20px;
-    background: #fff;
-  }
-
-  %PhotoControlerBefore {
-    top: 49px;
-  }
-  %PhotoControlerAfter {
-    top: 36px;
   }
 
   &__previous {

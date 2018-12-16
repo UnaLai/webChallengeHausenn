@@ -140,6 +140,27 @@ a {
   transform: translateX(0);
 }
 
+.kerwayWork__previous, .kerwayWork__next {
+  padding: 55px 30px;
+  cursor: pointer;
+}
+
+.kerwayWork__previous::before, .kerwayWork__previous::after, .kerwayWork__next::before, .kerwayWork__next::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 20px;
+  background: #fff;
+}
+
+.kerwayWork__previous::before, .kerwayWork__next::before {
+  top: 49px;
+}
+
+.kerwayWork__previous::after, .kerwayWork__next::after {
+  top: 36px;
+}
+
 .menu {
   width: 0;
   height: 100vh;
@@ -1129,23 +1150,6 @@ center {
   width: 100%;
   padding: 0 85px;
 }
-.kerwayWork .kerwayWork__previous, .kerwayWork .kerwayWork__next {
-  padding: 55px 30px;
-  cursor: pointer;
-}
-.kerwayWork .kerwayWork__previous::before, .kerwayWork .kerwayWork__previous::after, .kerwayWork .kerwayWork__next::before, .kerwayWork .kerwayWork__next::after {
-  content: '';
-  position: absolute;
-  width: 1px;
-  height: 20px;
-  background: #fff;
-}
-.kerwayWork .kerwayWork__previous::before, .kerwayWork .kerwayWork__next::before {
-  top: 49px;
-}
-.kerwayWork .kerwayWork__previous::after, .kerwayWork .kerwayWork__next::after {
-  top: 36px;
-}
 .kerwayWork__previous::before {
   transform: rotate(-49deg);
 }
@@ -1205,6 +1209,11 @@ footer {
   letter-spacing: .13rem;
   line-height: 1.6rem;
   text-transform: uppercase;
+}
+@media all and (max-width: 768px) {
+  footer {
+    padding: 75px 20px 65px;
+  }
 }
 footer.haussenFooter {
   background: #decbc4;
