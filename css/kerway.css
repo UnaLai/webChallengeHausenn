@@ -1172,10 +1172,43 @@ center {
   font-size: 1.2rem;
   z-index: 1;
 }
+@media all and (max-width: 768px) {
+  .kerwayWork__shareBox {
+    top: 20px;
+    padding: 0;
+    right: 15px;
+    font-size: 1.5rem;
+  }
+}
+.kerwayWork__shareBox:hover + .kerwayWork__photoInfoBox {
+  right: 0;
+}
+.kerwayWork__shareBox__share {
+  display: block;
+}
+@media all and (max-width: 768px) {
+  .kerwayWork__shareBox__share {
+    display: none;
+  }
+}
+.kerwayWork__shareBox__more {
+  display: none;
+}
+@media all and (max-width: 768px) {
+  .kerwayWork__shareBox__more {
+    display: block;
+  }
+}
+.kerwayWork__shareBox .kerwayWork__photoInfo__switch::before {
+  content: '\f101';
+}
+.kerwayWork__shareBox .kerwayWork__photoInfo__tab:checked + .kerwayWork__photoInfo__switch::before {
+  content: '\f100';
+}
 .kerwayWork__photoInfoBox {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: -100px;
   color: #fff;
   background: rgba(0, 0, 0, 0.8);
   height: 100%;
@@ -1183,6 +1216,19 @@ center {
   flex-direction: column;
   justify-content: flex-end;
   padding: 0 10px 20px;
+  transition-property: right;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
+  transition-delay: 0.1s;
+  -webkit-transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-in;
+  -webkit-transition-delay: 0.1s;
+  -o-transition-duration: 0.1s;
+  -o-transition-timing-function: ease-in;
+  -o-transition-delay: 0.1s;
+}
+.kerwayWork__photoInfoBox.appear {
+  right: 0;
 }
 .kerwayWork__photoInfo {
   transform: rotate(-90deg);
