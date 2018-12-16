@@ -1,6 +1,6 @@
 var kerwayPhotoClick = (function (){
-  
-  var masonryLayoutItem = document.getElementsByClassName('MasonryLayoutItem'),
+
+  var masonryLayoutItem = document.getElementsByClassName('tile'),
   wholePage = document.getElementById('wholePage'),
   kerwayWork = document.getElementById('kerwayWork'),
   photoContainer = document.getElementById('photoContainer'),
@@ -11,7 +11,7 @@ var kerwayPhotoClick = (function (){
 
   for (var i=0; i < masonryLayoutItem.length; i++) {
     var imgBox = masonryLayoutItem[i];
-    
+
     imgBox.addEventListener("click", function(){
       wholePage.classList.add('appear');
       kerwayWork.classList.add('appear');
@@ -23,4 +23,3 @@ var kerwayPhotoClick = (function (){
   }
 
 })();
-
