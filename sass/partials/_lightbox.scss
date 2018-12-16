@@ -1,7 +1,6 @@
 @import "./partials/_normalize.scss";
 @import "./modules/_mixinMediaquery.scss";
 @import "./modules/_extendClass.scss";
-
 .hausennFashionShow {
    width: 100%;
    height: 100vh;
@@ -32,6 +31,7 @@
       width: 25vw;
       padding-top: 15vh;
       padding-left: 30px;
+      position: relative;
       @include mediaquery_ipadpro {
          // padding-top: 0;
          width: 80vw;
@@ -53,14 +53,14 @@
             padding-left: 10px;
             margin: 10px 0;
             @include mediaquery_ipadpro {
-              position: absolute;
-              bottom:0;
-              left: 0;
-              background-color: white;
-              width: 100%;
-              text-align: center;
-              z-index: 3;
-              margin: 10px 0 0;
+               position: absolute;
+               bottom: -65vh;
+               left: -10vw;
+               background-color: white;
+               width: 100vw;
+               text-align: center;
+               z-index: 3;
+               margin: 10px 0 0;
             }
             &__item {
                &__title {
@@ -73,7 +73,7 @@
                      opacity: 0.4;
                   }
                   @include mediaquery_ipadpro {
-                    line-height: 30px;
+                     line-height: 30px;
                   }
                }
                &__submenu {
@@ -87,7 +87,7 @@
                         opacity: 0.4;
                      }
                      @include mediaquery_ipadpro {
-                       padding-left: 0;
+                        padding-left: 0;
                      }
                   }
                }
@@ -198,10 +198,10 @@
    display: block;
 }
 //小圖左右點擊
-.containerToRight{
-  transform: translateX(-101%);
+.containerToRight {
+   transform: translateX(-101%);
 }
 //移入畫面
-.moveToPage{
-  right:0;
+.moveToPage {
+   right: 0;
 }
