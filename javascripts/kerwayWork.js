@@ -1,4 +1,5 @@
 var kerwayPhotoClick = (function (){
+  
   var masonryLayoutItem = document.getElementsByClassName('MasonryLayoutItem'),
   wholePage = document.getElementById('wholePage'),
   kerwayWork = document.getElementById('kerwayWork'),
@@ -9,10 +10,8 @@ var kerwayPhotoClick = (function (){
   // console.log (masonryLayoutItem);
 
   for (var i=0; i < masonryLayoutItem.length; i++) {
-    //全部
-    var imgBox = masonryLayoutItem[i],
-        imgSrc = imgBox.children[0].getAttribute('src');
-
+    var imgBox = masonryLayoutItem[i];
+        // imgSrc = imgBox.children[0].getAttribute('src');
     // console.log(imgBox, imgSrc);
     
     imgBox.addEventListener("click", function(){
@@ -25,7 +24,10 @@ var kerwayPhotoClick = (function (){
     });
   }
 
-  controlPrevious.addEventListener("click", function(){});
+  controlPrevious.addEventListener("click", function(){
+    imgBoxPrevious = this
+    console.log(imgBoxPrevious);
+  });
   controlNext.addEventListener("click", function(){});
 
 })();

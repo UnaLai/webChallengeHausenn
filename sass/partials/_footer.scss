@@ -13,6 +13,10 @@ footer {
   line-height: 1.6rem;
   text-transform: uppercase;
 
+  @include mediaquery_ipad {
+    padding: 75px 20px 65px; 
+  }
+
   &.haussenFooter {
     background: $pink; 
   }
