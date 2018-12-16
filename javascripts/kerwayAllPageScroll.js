@@ -3,6 +3,11 @@ const concept = document.querySelector('.concept');
 const kerwayWorks = document.querySelector('.kerwayWorks');
 const parallax = document.querySelector('.parallax');
 
+//漢堡也要隨著滾動改變顏色，先拿到漢堡
+const humburger = document.querySelector('.switchIconBox');
+//contact button 也要隨著滾動改變顏色，先拿到
+const contactButton  = document.querySelector('.goToContactUs');
+
 //誰要實踐滾動
 var current = null;
 var onethingdo = null;
@@ -29,12 +34,18 @@ function pagemove() {
         onethingdo = "down";
         downBreakPoint = current.offsetTop + current.clientHeight;
         downmove(current, downBreakPoint);
+        setTimeout(function(){
+          humburger.classList.add('black');
+          contactButton.classList.add('black'); }, 200);
       }
     } else if ((current.offsetTop + (current.clientHeight / 2)) < parallax.scrollTop) {
       if (parallax.scrollTop < (current.offsetTop + current.clientHeight)) {
         onethingdo = "up";
         upBreakPoint = current.offsetTop;
         upmove(current, upBreakPoint);
+        setTimeout(function(){
+          humburger.classList.remove('black');
+          contactButton.classList.remove('black'); }, 200);
       }
     }
   }
@@ -44,6 +55,9 @@ function pagemove() {
         onethingdo = "down";
         downBreakPoint = current.offsetTop + current.clientHeight;
         downmove(current,downBreakPoint);
+        setTimeout(function(){
+          humburger.classList.remove('black');
+          contactButton.classList.remove('black'); }, 200);
       }
     }
     else if ((current.offsetTop + current.clientHeight - (0.5 * fullVh)) < parallax.scrollTop) {
@@ -51,6 +65,9 @@ function pagemove() {
         onethingdo = "up";
         upBreakPoint = current.offsetTop + current.clientHeight - fullVh;
         upmove(current,upBreakPoint);
+        setTimeout(function(){
+          humburger.classList.add('black');
+          contactButton.classList.add('black'); }, 200);
       }
     }
   }
