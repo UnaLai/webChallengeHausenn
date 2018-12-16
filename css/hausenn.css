@@ -925,9 +925,6 @@ footer .footerCopyright__sign {
   right: 0;
 }
 
-.hausennFashion {
-  overflow-x: hidden;
-}
 .hausennFashion::-webkit-scrollbar {
   width: 0;
 }
@@ -1367,6 +1364,44 @@ footer .footerCopyright__sign {
   -o-transition-duration: 0.3s;
   -o-transition-timing-function: cubic-bezier(0.4, 0, 1, 0.54);
   -o-transition-delay: 0.3s;
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  z-index: 99;
+}
+.loading__logo {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  width: 115px;
+  background-image: url("../images/hausenn/head_0 2.png");
+  background-position: center;
+  background-size: cover;
+  animation-name: loading;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.closeLoading {
+  display: none;
 }
 
 body {
