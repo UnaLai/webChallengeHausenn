@@ -11,8 +11,6 @@ var kerwayPhotoClick = (function (){
 
   for (var i=0; i < masonryLayoutItem.length; i++) {
     var imgBox = masonryLayoutItem[i];
-        // imgSrc = imgBox.children[0].getAttribute('src');
-    // console.log(imgBox, imgSrc);
     
     imgBox.addEventListener("click", function(){
       wholePage.classList.add('appear');
@@ -23,12 +21,6 @@ var kerwayPhotoClick = (function (){
       filter.classList.add('appear');
     });
   }
-
-  controlPrevious.addEventListener("click", function(){
-    imgBoxPrevious = this
-    console.log(imgBoxPrevious);
-  });
-  controlNext.addEventListener("click", function(){});
 
 })();
 
