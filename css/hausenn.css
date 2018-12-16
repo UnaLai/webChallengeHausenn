@@ -533,11 +533,12 @@ a {
   position: fixed;
   top: 0;
   z-index: 1;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
+  left: 100%;
+  overflow: hidden;
   background: url("https://images.unsplash.com/photo-1439539698758-ba2680ecadb9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80") no-repeat;
   background-size: cover;
-  left: 100vw;
   transition-property: left;
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.4, 0, 1, 0.54);
@@ -555,6 +556,15 @@ a {
   flex-direction: column;
   color: #fff;
 }
+.contact::after {
+  content: '';
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .contact.appear {
   left: 0;
 }
@@ -571,15 +581,6 @@ a {
   -o-transition-duration: 0.1s;
   -o-transition-timing-function: ease-in;
   -o-transition-delay: 0.1s;
-}
-.contact:after {
-  content: '';
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.25);
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 .contact .goToContactUs {
   position: fixed;
