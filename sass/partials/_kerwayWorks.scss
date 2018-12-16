@@ -80,7 +80,7 @@
 	padding: 10px 50px 10px 100px;
 	font-weight: 200;
 	letter-spacing: 4px;
-	overflow: hidden;
+	height: 52px;
 	@include mediaquery_phone {
 		padding: 15px 10px;
 	}
