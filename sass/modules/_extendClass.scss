@@ -1,0 +1,57 @@
+%container--fixed{
+  margin: 0 100px;
+  max-width: 100%;
+  @include mediaquery_phone{
+    margin: 0 20px;
+    max-width: $width--phone * 0.95;
+  }
+  @include mediaquery_ipad{
+    max-width: $width--ipad * 0.8;
+  }
+  @include mediaquery_ipadpro{
+    max-width: $width--ipadpro * 0.8;
+  }
+  @include mediaquery_pc{
+    max-width: $width--pc * 0.8;
+  }
+}
+
+%menuHidePosition {
+  transform: translateX(-590px);
+}
+%menuAppearPosition {
+  transform: translateX(0);
+}
+
+%hausennFashion--blockTitle{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
+  letter-spacing: 4pt;
+  line-height: 49px;
+  @include mediaquery_ipadpro {
+    font-size: 18px;
+    letter-spacing: 2pt;
+  }
+}
+
+%hausennFashion--blockCustom{
+  width: 100px;
+  height: 137px;
+  padding: 10px;
+  font-size: 10px;
+  letter-spacing: 2pt;
+  border: 1px solid black;
+  @include mediaquery_ipadpro {
+     border: none;
+   }
+}
+
+%hausennFashion--blockSeparate{
+  width: 135px;
+  height: 28px;
+  background-color: black;
+  @include mediaquery_ipadpro {
+     width: 37px;
+     height: 7px;
+   }
+}

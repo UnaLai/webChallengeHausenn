@@ -1,0 +1,13 @@
+@mixin transition($duration, $function, $delay) {
+  transition-duration: $duration;
+  transition-timing-function: $function;
+  transition-delay: $delay;
+  -webkit-transition-duration: $duration;
+  -webkit-transition-timing-function: $function;
+  -webkit-transition-delay: $delay;
+  -o-transition-duration: $duration;
+  -o-transition-timing-function: $function;
+  -o-transition-delay: $delay;
+}
+
+

@@ -1,19 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hausenn</title>
-  <link rel="stylesheet" href="css/hausenn.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hausenn</title>
+    <link rel="stylesheet" href="css/hausenn.css" />
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+    <!-- 瀑布流套件-masonry -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://masonry.desandro.com/jquery.masonry.min.js"></script>
+
+    <script src="./javascripts/kerwayWorks.js" defer></script>
 </head>
+
 <body>
-  <section class="hausennWelcome"></section>
-  <div class="menu"></div>
-  <section class="hausennContact"></section>
-  <section class="hausennFashion">
-    <div class="hausennFashion__show"></div>
-    <div class="footer"></div>
-  </section>
+    <div class="loading">
+        <div class="loading__logo"></div>
+    </div>
+    <nav class="menu menu__hausenn" id="nav">
+        <div class="switchIconBox" id="menuIcon">
+            <span class="switchIcon"></span>
+            <span class="switchIcon"></span>
+        </div>
+        <div class="menuNav">
+            <div class="menuNavTop">
+                <a href="#" class="menuNavTop__mainBrand menuNavTop__housennCamp"><img src="./images/menu/hausennCamp 2.png" alt="HAUSENNCAMP"></a>
+                <div class="menuNavTop__subBrand">
+                    <a href="/hausenn.html" class="menuNavTop__brandLink">
+            <img src="./images/menu/hausenn 4.png" alt="HAUSENN">
+            <img src="./images/menu/hover_hausenn.png" alt="HAUSENN">
+          </a>
+                    <a href="/kerway.html" class="menuNavTop__brandLink">
+            <img src="./images/menu/kerway.png" alt="KERWAY">
+            <img src="./images/menu/hover_kerway 2.png" alt="KERWAY">
+          </a>
+                    <a href="#" class="menuNavTop__brandLink">
+            <img src="./images/menu/sonstay 2.png" alt="SONSTAY">
+            <img src="./images/menu/hover_sonstay 2.png" alt="SONSTAY">
+          </a>
+                </div>
+            </div>
+            <div class="menuNavMiddle">
+                <a href="#"><img src="./images/menu/works 2.png" alt="WORKS"></a>
+                <a href="#"><img src="./images/menu/news 2.png" alt="NEWS"></a>
+                <a href="#" class="menuNavMiddle__contactLink" id="contactMenuLink"><img src="./images/menu/contact 3.png" alt="CONTACT"></a>
+            </div>
+            <div class="menuNavBottom">
+                <div class="menuNavBottom__socialMedia">
+                    <a href="#"><i class="fab fa-vimeo-v fa-fw"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f fa-fw"></i></a>
+                    <a href="#"><i class="fab fa-instagram fa-fw"></i></a>
+                    <a href="#"><i class="far fa-envelope fa-fw"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="contact" id="contactPage">
+        <div class="goToContactUs" id="contactButton">
+            <img src="./images/kerway/goToContactUs.png" alt="">
+        </div>
+        <h2>Contact Page</h2>
+        <h3>Lai, Mango, Askie</h3>
+    </section>
+    <div class="parallax" id="wholePage">
+        <section class="welcome">
+            <div class="photoBg photoBg__hausenn"></div>
+            <div class="logo">
+                <img src="./images/hausenn/header_photo_foreground 2.png" alt="">
+            </div>
+            <div class="arrow">
+                <!-- <a href=""> -->
+              <img src="./images/kerway/arrow.png" alt="">
+            </a>
+            </div>
+        </section>
+
+        <section class="hausennFashion">
+            <div class="hausennTitle"></div>
+            <div class="parallax__group blockImpression">
+                <div class="parallax__baselayer">
+                    <p class="blockImpression__title">DECONSTRUCT</br>VERSUS RECONSTRUCT</br>SURMOUNT AND</br>REMODEL</p>
+                </div>
+                <div class="parallax__firstlayer">
+                    <div class="blockImpression__model"></div>
+                    <div class="blockImpression__dress"></div>
+                </div>
+                <div class="parallax__secendlayer">
+                    <div class="blockImpression__back"></div>
+                    <div class="blockImpression__text">結構與解構</br>打破與重塑</br>顛覆服飾的</br>種種邏輯</div>
+                </div>
+            </div>
+
+            <div class="parallax__group blockSewing">
+                <div class="parallax__baselayer">
+                    <div class="blockSewing__title">INTERWEAVINGBETWEEN FABRIC AND</br>MATERIALS</div>
+                </div>
+                <div class="parallax__secendlayer">
+                    <div class="blockSewing__separate"></div>
+                    <div class="blockSewing__text">遊走針與線布料與媒材交織，</br>而成HAUSENN</br>這個獨一無二的新代名詞。</div>
+                </div>
+            </div>
+
+            <div class="parallax__group blockCouture">
+                <div class="parallax__baselayer">
+                    <div class="blockCouture__title">COUTURE</div>
+                    <div class="blockCouture__custom">訂製服</div>
+                    <div class="blockCouture__separate"></div>
+                </div>
+                <div class="parallax__firstlayer">
+                    <img src="./images/hausenn/banner_img3.png" class="blockCouture__pic"></img>
+                </div>
+                <div class="parallax__secendlayer">
+                    <div class="blockCouture__back"></div>
+                </div>
+            </div>
+
+            <div class="parallax__group blockCollections">
+                <div class="parallax__baselayer">
+                    <div class="blockCollections__title">COLLECTIONS</div>
+                    <div class="blockCollections__custom">女裝</div>
+                    <div class="blockCollections__separate"></div>
+                </div>
+                <div class="parallax__firstlayer">
+                    <img src="./images/hausenn/banner_img4.png" class="blockCollections__pic"></img>
+                </div>
+                <div class="parallax__secendlayer">
+                    <div class="blockCollections__back"></div>
+                </div>
+            </div>
+
+            <div class="parallax__group blockSeasons">
+                <div class="parallax__baselayer">
+                    <div class="blockSeasons__custom">男裝</div>
+                    <div class="blockSeasons__title">SEASONS</div>
+                    <div class="blockSeasons__separate"></div>
+                </div>
+                <div class="parallax__firstlayer">
+                    <div class="blockSeasons__back"></div>
+                </div>
+                <div class="parallax__secendlayer">
+                    <img src="./images/hausenn/banner_img5.png" class="blockSeasons__pic"></img>
+                    <img src="./images/hausenn/banner_img6.png" class="blockSeasons__background"></img>
+                </div>
+            </div>
+        </section>
+
+        <footer class="haussenFooter">
+            <div>
+                <p class="footerContactAddress">臺南市中西區樹林街貳段貳巷壹號</p>
+                <a href="hausenn.html"><img src="./images/footer/banner_title 2.png" alt="HAUSENN Logo"></a>
+            </div>
+            <div class="footerBrandBox">
+                <p class="footerMailPhone">Hausenncamp.fashion@gmail.com<br>+886 6 214 7968</p>
+                <p class="footerCopyright">copyright <span class="footerCopyright__sign">&copy;</span> 2017 Hausenncamp</p>
+            </div>
+        </footer>
+    </div>
+    <div class="hausennFashionShow" id="hausennFashionShow">
+        <i class="fas fa-times hausennFashionShowClose"></i>
+        <div class="hausennFashionShow__menu">
+            <div class="hausennFashionShow__menu__sort" id="couture">
+                <div class="hausennFashionShow__menu__sort__title">COUTURE</div>
+                <ul class="hausennFashionShow__menu__sort__mainmenu">
+                    <li class="hausennFashionShow__menu__sort__mainmenu__item" id="coutureSevenSpringSummer">
+                        <div class="hausennFashionShow__menu__sort__mainmenu__item__title">2017 SPRING/SUMMER</div>
+                        <ul class="hausennFashionShow__menu__sort__mainmenu__item__submenu">
+                            <li>IMAGE</li>
+                            <li>LOOKBOOK</li>
+                        </ul>
+                    </li>
+                    <li class="hausennFashionShow__menu__sort__mainmenu__item" id="coutureSevenAutumnWinter">
+                        <div class="hausennFashionShow__menu__sort__mainmenu__item__title">2017 AUTUMN/WINTER</div>
+                        <ul class="hausennFashionShow__menu__sort__mainmenu__item__submenu">
+                            <li>IMAGE</li>
+                            <li>LOOKBOOK</li>
+                        </ul>
+                    </li>
+                    <li class="hausennFashionShow__menu__sort__mainmenu__item">
+                        <div class="hausennFashionShow__menu__sort__mainmenu__item__title">2018 SPRING/SUMMER</div>
+                        <ul class="hausennFashionShow__menu__sort__mainmenu__item__submenu">
+                            <li>IMAGE</li>
+                            <li>LOOKBOOK</li>
+                        </ul>
+                    </li>
+                    <li class="hausennFashionShow__menu__sort__mainmenu__item">
+                        <div class="hausennFashionShow__menu__sort__mainmenu__item__title">2018 AUTUMN/WINTER</div>
+                        <ul class="hausennFashionShow__menu__sort__mainmenu__item__submenu">
+                            <li>IMAGE</li>
+                            <li>LOOKBOOK</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="hausennFashionShow__menu__sort" id="collections">
+                <div class="hausennFashionShow__menu__sort__title">COLLECTIONS</div>
+                <ul class="hausennFashionShow__menu__sort__mainmenu">
+                    <li class="hausennFashionShow__menu__sort__mainmenu__item" id="collectionsSevenSpringSummer">
+                        <div class="hausennFashionShow__menu__sort__mainmenu__item__title">2017 SPRING/SUMMER</div>
+                        <ul class="hausennFashionShow__menu__sort__mainmenu__item__submenu">
+                            <li>IMAGE</li>
+                            <li>LOOKBOOK</li>
+                        </ul>
+                    </li>
+                    <li class="hausennFashionShow__menu__sort__mainmenu__item" id="collectionsEightAutumnWinter">
+                        <div class="hausennFashionShow__menu__sort__mainmenu__item__title">2018 SPRING/SUMMER</div>
+                        <ul class="hausennFashionShow__menu__sort__mainmenu__item__submenu">
+                            <li>IMAGE</li>
+                            <li>LOOKBOOK</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="hausennFashionShow__menu__sort" id="seasons">
+                <div class="hausennFashionShow__menu__sort__title">SEASONS</div>
+                <ul class="hausennFashionShow__menu__sort__mainmenu">
+                    <li class="hausennFashionShow__menu__sort__mainmenu__item" id="seasonsSevenAutumnWinter">
+                        <div class="hausennFashionShow__menu__sort__mainmenu__item__title">2017 SPRING/SUMMER</div>
+                        <ul class="hausennFashionShow__menu__sort__mainmenu__item__submenu">
+                            <li>IMAGE</li>
+                            <li>LOOKBOOK</li>
+                        </ul>
+                    </li>
+                    <li class="hausennFashionShow__menu__sort__mainmenu__item" id="seasonsSevenSpringSummer">
+                        <div class="hausennFashionShow__menu__sort__mainmenu__item__title">2017 AUTUMN/WINTER</div>
+                        <ul class="hausennFashionShow__menu__sort__mainmenu__item__submenu">
+                            <li>IMAGE</li>
+                            <li>LOOKBOOK</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="hausennFashionShow__lightbox">
+            <div class="hausennFashionShow__lightbox__expand">
+                <img src="./images/hausenn/1_l.png" class="hausennFashionShow__lightbox__expand__pic displaySlide"></img>
+                <img src="https://fakeimg.pl/500x300/4CDBCF/" class="hausennFashionShow__lightbox__expand__pic"></img>
+                <img src="./images/hausenn/1_l.png" class="hausennFashionShow__lightbox__expand__pic"></img>
+                <img src="https://fakeimg.pl/500x300/BEF8AD/" class="hausennFashionShow__lightbox__expand__pic"></img>
+                <img src="./images/hausenn/1_l.png" class="hausennFashionShow__lightbox__expand__pic"></img>
+                <img src="https://fakeimg.pl/500x300/F6F9BD/" class="hausennFashionShow__lightbox__expand__pic"></img>
+                <img src="./images/hausenn/1_l.png" class="hausennFashionShow__lightbox__expand__pic"></img>
+                <img src="https://fakeimg.pl/500x300/4CDBCF/" class="hausennFashionShow__lightbox__expand__pic"></img>
+                <img src="./images/hausenn/1_l.png" class="hausennFashionShow__lightbox__expand__pic"></img>
+                <img src="https://fakeimg.pl/500x300/BEF8AD/" class="hausennFashionShow__lightbox__expand__pic"></img>
+                <img src="./images/hausenn/1_l.png" class="hausennFashionShow__lightbox__expand__pic"></img>
+                <img src="https://fakeimg.pl/500x300/F6F9BD/" class="hausennFashionShow__lightbox__expand__pic"></img>
+            </div>
+            <div class="hausennFashionShow__lightbox__controlLeft">
+                <</div>
+                    <div class="hausennFashionShow__lightbox__controlRight">></div>
+                    <div class="hausennFashionShow__lightbox__choose">
+                        <div class="hausennFashionShow__lightbox__choose__container">
+                            <img class="hausennFashionShow__lightbox__choose__container__img activeImg" src="./images/hausenn/1_l.png" onclick="currentSlide(0)"></img>
+                            <img class="hausennFashionShow__lightbox__choose__container__img" src="https://fakeimg.pl/500x300/4CDBCF/" onclick="currentSlide(1)"></img>
+                            <img class="hausennFashionShow__lightbox__choose__container__img" src="./images/hausenn/1_l.png" onclick="currentSlide(2)"></img>
+                            <img class="hausennFashionShow__lightbox__choose__container__img" src="https://fakeimg.pl/500x300/BEF8AD/" onclick="currentSlide(3)"></img>
+                            <img class="hausennFashionShow__lightbox__choose__container__img" src="./images/hausenn/1_l.png" onclick="currentSlide(4)"></img>
+                            <img class="hausennFashionShow__lightbox__choose__container__img" src="https://fakeimg.pl/500x300/F6F9BD/" onclick="currentSlide(5)"></img>
+                            <img class="hausennFashionShow__lightbox__choose__container__img" src="./images/hausenn/1_l.png" onclick="currentSlide(6)"></img>
+                            <img class="hausennFashionShow__lightbox__choose__container__img" src="https://fakeimg.pl/500x300/4CDBCF/" onclick="currentSlide(7)"></img>
+                            <img class="hausennFashionShow__lightbox__choose__container__img" src="./images/hausenn/1_l.png" onclick="currentSlide(8)"></img>
+                            <img class="hausennFashionShow__lightbox__choose__container__img" src="https://fakeimg.pl/500x300/BEF8AD/" onclick="currentSlide(9)"></img>
+                            <img class="hausennFashionShow__lightbox__choose__container__img" src="./images/hausenn/1_l.png" onclick="currentSlide(10)"></img>
+                            <img class="hausennFashionShow__lightbox__choose__container__img" src="https://fakeimg.pl/500x300/F6F9BD/" onclick="currentSlide(11)"></img>
+                        </div>
+
+                    </div>
+            </div>
+        </div>
+        <script src="javascripts/loading.js"></script>
+          <script src="javascripts/welcomeMousemove.js"></script>
+        <script src="javascripts/haussanLightbox.js"></script>
+        <script src="javascripts/haussanAllPageScroll.js"></script>
+        <script src="./javascripts/menu.js"></script>
+
 </body>
+
 </html>

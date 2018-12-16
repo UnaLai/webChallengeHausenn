@@ -1,0 +1,117 @@
+@import '../modules/variablesBezier';
+@import '../modules/mixinTransition';
+@import '../modules/mixinWholePage';
+
+.kerwayWork {
+  @include wholePageLayout;
+  transition-property: left;
+  @include transition(.3s, $pullCurveAnimation, .3s);
+
+  &__photoBox {
+    position: relative;
+    height: 100%;
+  }
+
+  &__photo {
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__controlBox {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 85px;
+  }
+
+  %PhotoControlBox {
+    padding: 55px 30px;
+    cursor: pointer;
+  }
+
+  %PhotoControler {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    background: #fff;
+  }
+
+  %PhotoControlerBefore {
+    top: 49px;
+  }
+  %PhotoControlerAfter {
+    top: 36px;
+  }
+
+  &__previous {
+    @extend %PhotoControlBox;
+    &::before{
+      @extend %PhotoControler;
+      @extend %PhotoControlerBefore;
+      transform: rotate(-49deg);
+    }
+    &::after{
+      @extend %PhotoControler;
+      @extend %PhotoControlerAfter;
+      transform: rotate(49deg);
+    }
+  }
+
+  &__next {
+    @extend %PhotoControlBox;
+    &::before{
+      @extend %PhotoControler;
+      @extend %PhotoControlerBefore;
+      transform: rotate(49deg);
+    }
+    &::after{
+      @extend %PhotoControler;
+      @extend %PhotoControlerAfter;
+      transform: rotate(-49deg);
+    }
+  }
+
+  &__shareBox {
+    position: absolute;
+    right: 30px;
+    top: 40px;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    z-index: 1;
+  }
+
+  &__photoInfoBox {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    background: rgba(0,0,0,.8);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 10px 20px;
+  }
+  &__photoInfo {
+    transform: rotate(-90deg);
+    padding: 40px 0;
+    h2 {
+      font-size: .8rem;
+      font-weight: 500;
+    }
+
+    h3 {
+      font-weight: 900;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: .1rem;
+    }
+  }
+}

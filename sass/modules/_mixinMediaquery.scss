@@ -1,0 +1,20 @@
+@mixin mediaquery_phone {
+    @media all and (max-width: $width--phone) {
+        @content;
+    }
+}
+@mixin mediaquery_ipad {
+    @media all and (max-width: $width--ipad) {
+        @content;
+    }
+}
+@mixin mediaquery_ipadpro {
+    @media all and (max-width: $width--ipadpro) {
+        @content;
+    }
+}
+@mixin mediaquery_pc{
+    @media all and (max-width: $width--pc){
+        @content;
+    }
+}

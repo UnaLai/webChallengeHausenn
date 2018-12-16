@@ -1,0 +1,356 @@
+@import "./modules/_mixinMediaquery.scss";
+@import "./modules/_extendClass.scss";
+@import './modules/_mixin-parallax.scss';
+
+.hausennFashion {
+   // height: 100vh;
+   @extend %container--fixed;
+   // overflow-x: hidden;
+   &::-webkit-scrollbar {
+      width: 0;
+   }
+   .hausennTitle {
+      margin: 50px auto 173px;
+      background-image: url("../images/hausenn/banner_title 2.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 200px;
+      height: 32px;
+      @include mediaquery_ipadpro {
+         margin: 50px auto;
+         width: 125px;
+         height: 20px;
+      }
+   }
+   .blockImpression {
+      height: calc(411px + 95px + 292px);
+      //調整base層的排列
+      @include mediaquery_ipadpro {
+         //height 設計圖沒給，直接用100%後的圖片高度
+         height: 230px;
+      }
+      @include mediaquery_phone {
+         //height 設計圖沒給，直接用100%後的圖片高度
+         height: 113px;
+      }
+      .parallax__baselayer {
+         position: relative;
+         top: 50%;
+         left: 50%;
+      }
+      &__title {
+         width: 46%;
+         font-family: 'Open Sans', sans-serif;
+         font-size: 35px;
+         letter-spacing: 4pt;
+         line-height: 49px;
+         color: #000;
+         transform: translate(-50%,-50%);
+         @include mediaquery_ipadpro {
+            display: none;
+         }
+      }
+      &__model {
+         background-image: url("../images/hausenn/banner_img1 2.png");
+         background-position: center;
+         background-size: cover;
+         width: 100%;
+         height: 411px;
+         position: absolute;
+         top: -240px;
+         left: 0;
+         @include mediaquery_ipadpro {
+            top: -70px;
+            //依照比例推高
+            height: 230px;
+         }
+         @include mediaquery_ipad {
+            top: -65px;
+            //依照比例推高
+            height: 180px;
+         }
+         @include mediaquery_phone {
+            top: -64px;
+            //依照比例推高
+            height: 113px;
+         }
+      }
+      &__dress {
+         background-image: url("../images/hausenn/banner_img2.png");
+         background-position: center;
+         background-size: cover;
+         width: 570px;
+         height: 292px;
+         position: absolute;
+         top: 285px;
+         left: 4%;
+         @include mediaquery_ipadpro {
+            display: none;
+         }
+      }
+      &__back {
+         width: 80%;
+         //1023除1166
+         height: 28vw;
+         //388除1366
+         background-color: #efeceb;
+         position: absolute;
+         top: -80px;
+         left: 0;
+         @include mediaquery_ipadpro {
+            top: -35px;
+         }
+         @include mediaquery_ipad {
+            top: 20px;
+         }
+         @include mediaquery_phone {
+            top: -35px;
+         }
+      }
+      &__text {
+         font-family: 'Noto Sans', sans-serif;
+         font-size: 20px;
+         letter-spacing: 3pt;
+         line-height: 27px;
+         position: absolute;
+         top: 345px;
+         right: 7%;
+         @include mediaquery_ipadpro {
+            display: none;
+         }
+      }
+   }
+   .blockSewing {
+      height: 570px;
+      margin-top: 160px;
+      cursor: pointer;
+      @include mediaquery_ipadpro {
+         margin-top: 100px;
+         height: 390px;
+      }
+      &__title {
+         font-family: 'Open Sans', sans-serif;
+         font-size: 25px;
+         letter-spacing: 4pt;
+         line-height: 40px;
+         color: #000;
+         transform: translate(25%,180%);
+         @include mediaquery_ipadpro {
+            font-size: 14px;
+            letter-spacing: 2pt;
+            transform: translate(0,70%);
+         }
+      }
+      &__separate {
+         width: 55px;
+         height: 7px;
+         background-color: black;
+         position: absolute;
+         top: 110px;
+         left: 25%;
+         @include mediaquery_ipadpro {
+            left: 0;
+            top: 15px;
+         }
+      }
+      &__text {
+         font-family: 'Noto Sans', sans-serif;
+         font-size: 20px;
+         letter-spacing: 3pt;
+         line-height: 27px;
+         position: absolute;
+         top: 80px;
+         right: 5%;
+         @include mediaquery_ipadpro {
+            left: 0;
+            right: 0;
+            font-size: 14px;
+            line-height: 20px;
+         }
+      }
+   }
+   .blockCouture {
+      height: 732px;
+      cursor: pointer;
+      @include mediaquery_ipadpro {
+         margin-top: 100px;
+         height: 281px;
+      }
+      &__title {
+         @extend %hausennFashion--blockTitle;
+         text-align: right;
+         transform: translate(-10%,110%);
+         @include mediaquery_ipadpro {
+            transform: translate(-5%, 80%);
+         }
+      }
+      &__custom {
+         @extend %hausennFashion--blockCustom;
+         position: absolute;
+         right: 12%;
+         top: 120px;
+         @include mediaquery_ipadpro {
+            right: -8%;
+            top: 75px;
+         }
+      }
+      &__separate {
+         @extend %hausennFashion--blockSeparate;
+         position: absolute;
+         right: 11%;
+         top: 320px;
+         @include mediaquery_ipadpro {
+            right: 6%;
+            top: 120px;
+         }
+      }
+      &__pic {
+         width: 90%;
+         position: absolute;
+         top: -100px;
+         right: 4%;
+         @include mediaquery_ipadpro {
+            top: -75px;
+         }
+      }
+      &__back {
+         width: 36%;
+         height: 33vw;
+         background-color: #efeceb;
+         position: absolute;
+         top: -90px;
+         right: 4%;
+      }
+   }
+   .blockCollections {
+      height: 760px;
+      margin-top: 100px;
+      cursor: pointer;
+      @include mediaquery_ipadpro {
+         height: 160px;
+      }
+      &__title {
+         @extend %hausennFashion--blockTitle;
+         position: absolute;
+         top: 220px;
+         left: 7%;
+         @include mediaquery_ipadpro {
+            top: 25px;
+         }
+      }
+      &__custom {
+         @extend %hausennFashion--blockCustom;
+         @include mediaquery_ipadpro {
+            transform: translate(17%,42%);
+         }
+      }
+      &__separate {
+         @extend %hausennFashion--blockSeparate;
+         position: absolute;
+         left: 7%;
+         top: 410px;
+         @include mediaquery_ipadpro {
+            top: 100px;
+         }
+      }
+      &__pic {
+         width: 35vw;
+         position: absolute;
+         top: -74px;
+         left: 11%;
+         @include mediaquery_ipadpro {
+            top: -130px;
+            left: 10%;
+         }
+      }
+      &__back {
+         width: 36vw;
+         height: 30vw;
+         background-color: #efeceb;
+         position: absolute;
+         top: -220px;
+         left: 2%;
+         @include mediaquery_ipadpro {
+            top: -180px;
+         }
+      }
+   }
+   .blockSeasons {
+      height: 921px;
+      margin-bottom: 250px;
+      cursor: pointer;
+      @include mediaquery_ipadpro {
+         height: 370px;
+      }
+      &__title {
+         @extend %hausennFashion--blockTitle;
+         position: relative;
+         top: 455px;
+         left: 36%;
+         @include mediaquery_ipadpro {
+            top: 0;
+            left: 37%;
+         }
+      }
+      &__custom {
+         @extend %hausennFashion--blockCustom;
+         position: relative;
+         top: 390px;
+         left: 48%;
+         @include mediaquery_ipadpro {
+            top: 162px;
+            left: 35%;
+         }
+      }
+      &__separate {
+         @extend %hausennFashion--blockSeparate;
+         position: relative;
+         top: 417px;
+         right: -87%;
+         @include mediaquery_ipadpro {
+           left: 37%;
+           top: 12px;
+           right: -40%;
+         }
+      }
+      &__back {
+         width: 13vw;
+         height: 16vw;
+         background-color: #efeceb;
+         position: absolute;
+         top: 200px;
+         right: 30%;
+         @include mediaquery_ipadpro {
+           top: -24px;
+         }
+      }
+      &__pic {
+         width: 33vw;
+         height: 42vw;
+         position: absolute;
+         top: -170px;
+         right: 3%;
+         z-index: 4;
+         @include mediaquery_ipadpro {
+           top: -115px;
+         }
+      }
+      &__background {
+         width: 54vw;
+         height: 43vw;
+         position: absolute;
+         z-index: 2;
+         right: 24%;
+         top: 110px;
+         @include mediaquery_ipadpro {
+            top: 40px;
+         }
+      }
+   }
+}
+
+//讓welocome 的層級比較高
+.welcome{
+  z-index: 50;
+}

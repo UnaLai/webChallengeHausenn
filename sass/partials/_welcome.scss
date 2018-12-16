@@ -1,0 +1,74 @@
+
+@import '../modules/variablesWidth';
+@import '../modules/mixinMediaquery';
+
+
+img{
+  display: block;
+}
+a{
+  cursor: pointer;
+}
+.welcome{
+  width: 100%;
+  position: relative;
+  left: 0;
+}
+.photoBg{
+  background: url(../images/kerway/header_photo_background.png)  center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding-bottom: 100vh;
+
+  &__hausenn {
+    background: url(../images/hausenn/header_photo_background.jpg) center center no-repeat;
+    background-size: cover;
+  }
+}
+.logo::before,.logo::after{
+  content: "";
+  display: block;
+  width: 175px;
+  height: 1px;
+  overflow: hidden;
+  background: #fff;
+  position: absolute;
+  bottom: 50%;
+  @include mediaquery_phone{
+    display: none;
+  }
+}
+.logo::before{
+  left: 250px;
+}
+.logo::after{
+  right: 250px;
+}
+.logo img{
+  width: 50vw;
+  max-width: 510px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  @include mediaquery_phone{
+    width: 80vw;
+  }
+}
+.arrow img{
+  width: 24px;
+  height: 34px;
+  position: absolute;
+  bottom: 72px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  animation: upDown 1s infinite;
+}
+@keyframes upDown{
+  0% { transform:translateY(0px);}
+  50% {transform:translateY(10px);}
+  100% {transform:translateY(0px);}
+}

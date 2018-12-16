@@ -1,0 +1,250 @@
+@import "./modules/_mixinMediaquery.scss";
+@import "./modules/_extendClass.scss";
+@import './modules/_mixin-parallax.scss';
+@import './partials/parellaxSetting.scss';
+
+
+.concept {
+   // height: 100vh;
+   margin-top: 30px;
+   @extend %container--fixed;
+   // overflow-x: hidden;
+   &::-webkit-scrollbar {
+      width: 0;
+   }
+   .title {
+      margin: 50px auto 175px;
+      background-image: url("../images/kerway/banner_title.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 192px;
+      height: 32px;
+      @include mediaquery_ipadpro {
+         margin: 35px auto;
+         //375*37%=138.75
+         width: 139px;
+         //height設計稿是20px
+         height: 23px;
+      }
+   }
+   //base
+   .mainSeparate {
+      width: 36px;
+      height: 4px;
+      background-color: black;
+      margin-right: 110px;
+      @include mediaquery_ipadpro {
+         width: 21px;
+         height: 2px;
+         margin-right: 40px;
+      }
+   }
+   .secondaryPicTop {
+      width: 390px;
+      height: 520px;
+      background-image: url("../images/kerway/banner_img41.png");
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      right: 18%;
+      @include mediaquery_ipadpro {
+        width: 150px;
+        height: 200px;
+          right: 33%;
+      }
+   }
+   .secondaryArticle {
+      font-size: 12pt;
+      line-height: 24pt;
+      letter-spacing: 2pt;
+      width: 360px;
+      position: relative;
+      top: 360px;
+      left: 70px;
+      text-align: justify;
+      @include mediaquery_ipadpro {
+         font-size: 10pt;
+         line-height: 16pt;
+         top: 360px;
+         width: 100%;
+         left: 0;
+      }
+   }
+   //first
+   .mainTitle {
+      position: absolute;
+      top: -300px;
+      right: 9%;
+      font-size: 44pt;
+      line-height: 65pt;
+      letter-spacing: 2pt;
+      text-align: right;
+      @include mediaquery_ipadpro {
+         font-size: 21pt;
+         line-height: 35pt;
+         top: -180px;
+      }
+   }
+   .secondaryTitle {
+      font-size: 44pt;
+      line-height: 65pt;
+      letter-spacing: 3pt;
+      position: absolute;
+      top: -715px;
+      left: 6%;
+      @include mediaquery_ipadpro {
+         font-size: 21pt;
+         line-height: 35pt;
+         letter-spacing: 2pt;
+         top: -70px;
+         left: 0;
+      }
+   }
+   .secondaryPicSecond {
+      position: absolute;
+      top: -650px;
+      right: 0%;
+      width: 390px;
+      height: 520px;
+      background-image: url("../images/kerway/banner_img42.png");
+      background-position: center;
+      background-size: cover;
+      @include mediaquery_ipadpro {
+         width: 150px;
+         height: 200px;
+         top: -175px;
+         right: 25%;
+      }
+   }
+   //secend
+   .mainPic {
+      width: 100%;
+      height: 643px;
+      background-image: url("../images/kerway/banner_img1.png");
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      top: -825px;
+      @include mediaquery_ipadpro {
+         height: calc(345px * 0.55);
+         top: -313px;
+      }
+   }
+   .mainSubtitle {
+      font-size: 14pt;
+      line-height: 24pt;
+      letter-spacing: 3pt;
+      text-align: right;
+      position: absolute;
+      top: 130px;
+      right: 10%;
+      @include mediaquery_ipadpro {
+         font-size: 12pt;
+         top: 45px;
+      }
+   }
+   .secondarySubtitle {
+      position: relative;
+      top: -550px;
+      left: 330px;
+      width: 150px;
+      font-size: 19pt;
+      line-height: 38pt;
+      letter-spacing: 3pt;
+      -webkit-writing-mode: vertical-rl;
+      writing-mode: vertical-rl;
+      @include mediaquery_ipadpro {
+         font-size: 12pt;
+         line-height: 24pt;
+         top: 40px;
+         left: 33%;
+      }
+   }
+   .secondarySeparate {
+      position: absolute;
+      top: -336px;
+      left: 0;
+      width: 36px;
+      height: 4px;
+      background-color: black;
+      @include mediaquery_ipadpro {
+         width: 21px;
+         height: 2px;
+         top: 140px;
+      }
+   }
+   .secondaryPicBottom {
+      position: absolute;
+      top: -540px;
+      right: -15%;
+      width: 390px;
+      height: 520px;
+      background-image: url("../images/kerway/banner_img43.png");
+      background-position: center;
+      background-size: cover;
+      @include mediaquery_ipadpro {
+         width: 150px;
+         height: 200px;
+         top: -156px;
+         right: 18%;
+      }
+   }
+}
+.mainBaselayer {
+   height: calc(643px + 400px);
+   display: flex;
+   justify-content: flex-end;
+   align-items: flex-end;
+   @include mediaquery_ipadpro {
+      height: calc(345px * 0.55 + 150px);
+   }
+}
+.secondary {
+   display: flex;
+   margin-top: 450px;
+   @include mediaquery_ipadpro {
+      margin-top: 0;
+      flex-direction: column;
+   }
+   &__text {
+      width: 50%;
+      @include mediaquery_ipadpro {
+         width: 100%;
+         order: 2;
+      }
+   }
+   &__pic {
+      width: 50%;
+      @include mediaquery_ipadpro {
+         width: 100%;
+         order: 1;
+      }
+   }
+}
+.secondaryPicBaselayer,
+.secondaryTextBaselayer {
+   height: calc(165px + 200px + 230px + 100px + 100px);
+}
+.secondaryPicBaselayer {
+   @include mediaquery_ipadpro {
+      height: 200px;
+      margin-top: 300px;
+   }
+}
+.secondaryTextBaselayer {
+   @include mediaquery_ipadpro {
+      height: 200px;
+   }
+}
+.secondary__text{
+  @include mediaquery_ipadpro {
+      height: 600px;
+  }
+}
+
+//爲了視差圖層不要跑到welcome
+.welcome{
+  z-index: 50;
+}

@@ -1,0 +1,152 @@
+.kerwayWorks{
+	background-color: #000;
+}
+.kerwayWorksTitel{
+	box-sizing: border-box;
+	padding: 50px 0px;
+}
+.kerwayWorksTitel > img{
+	width: 192px;
+	height: 32px;
+	margin: 0 auto;
+}
+.kerwayFilterTitel{
+	margin-left: 50px;
+	@include mediaquery_phone{
+		margin-left: 10px;
+	}
+}
+.kerwayFilterTitel > div:nth-child(1){
+	width: 150px;
+	height: 16px;
+	background: #fff;
+	margin-bottom: 30px;
+}
+.kerwayFilterTitel > div:nth-child(2){
+	font-size: 40px;
+	font-family: Open;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	color: #fff;
+	margin-bottom: 30px;
+}
+.kerwayFilterTitel > div:nth-child(3){
+	font-size: 32px;
+	font-family: Noto;
+	letter-spacing: 4px;
+	color: #fff;
+}
+
+#MasonryLayout{
+	margin: 0 100px;
+	z-index: 1;
+	@include mediaquery_phone{
+		margin: 0 10px;
+	}
+}
+.MasonryLayoutItem{
+	width:350px;
+	margin-bottom: 50px;
+	overflow: hidden;
+}
+.MasonryLayoutItem > img{
+	width: 100%;
+}
+
+
+.filter{
+	position: fixed;
+	bottom: 0vh;
+	z-index: 2;
+	width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	padding: 15px 50px 15px 100px;
+	font-weight: 200;
+	letter-spacing: 4px;
+	opacity: 1;
+	display: block;
+	&.appear {
+		opacity: 0;
+		display: none;
+	}
+	@include mediaquery_phone{
+		padding: 15px 10px 15px 10px;
+	}
+}
+.filter > a:first-child{
+	color: #fff;
+}
+.nineGrid{
+	float: left;
+	@include mediaquery_phone{
+		display: none;
+	}
+}
+.arrowUp{
+	float: right;
+}
+.nineGrid,.arrowUp{
+	font-size: 24px;
+}
+center{
+	position: relative;
+}
+.kerwayList{
+	width: 176px;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	z-index: 4;
+	@include mediaquery_phone{
+		width: 90px;
+	}
+}
+#work{
+	bottom: -86px;
+	right: 542px;
+	transition: bottom 0.5s;
+	@include mediaquery_phone{
+		// right: 215px;
+		left: 210px;
+	}
+}
+#photographer{
+	bottom: -64px;
+	right: 321px;
+	transition: bottom 0.3s;
+	@include mediaquery_phone{
+		// right: 125px;
+		left: 110px;
+	}
+}
+#fashionStylist{
+	bottom: -64px;
+	right: 100px;
+	transition: bottom 0.5s;
+	@include mediaquery_phone{
+		left: 10px;
+	}
+}
+#work:hover,#photographer:hover,#fashionStylist:hover{
+	bottom: 0;
+}
+.kerwayList > a{
+	color: #000;
+	background-color: #fff;
+}
+.kerwayList > div:first-child{
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0);
+	padding: 15px 5px;
+}
+.kerwayList > a{
+	visibility: hidden;
+}
+.kerwayList:hover > a{
+	visibility: visible;
+	padding: 2px 5px;
+}
+.kerwayList:hover > a:hover{
+	background-color: gray;
+}
