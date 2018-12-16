@@ -8,23 +8,20 @@ var menuContactAnimate = function(){
       nav      =  document.getElementById('nav'),
       openAllClass       = 'appear',
       activeMenuClass    = 'menuAppear',
-      activeContactClass = 'contactAppear';
+      activeContactClass = 'contactAppear',
+      activePhotoClass = 'photoAppear';
 
   var contactButton   = document.getElementById('contactButton'),
-      contactIcon     = document.getElementById('contactIcon'),
       wholePage         = document.getElementById('wholePage'),
       contactPage     = document.getElementById('contactPage'),
       contactMenuLink = document.getElementById('contactMenuLink'),
-      filter = document.getElementById('filter');;
-
-  var menuExist = nav.classList.contains(activeMenuClass),
-      contactExist = nav.classList.contains(activeContactClass);
+      filter = document.getElementById('filter');
 
   menuIcon.addEventListener('click', function(){
     menuIcon.classList.toggle(openAllClass);
 
       if ( nav.classList.contains(activeContactClass) ) {
-        // 要關閉 contact
+        // 關閉 contact
         contactPage.classList.remove(openAllClass);
         wholePage.classList.remove(openAllClass);
         nav.classList.remove(activeContactClass);
@@ -35,7 +32,15 @@ var menuContactAnimate = function(){
         // 關閉 contact
         nav.classList.remove(activeMenuClass);
       }
-      else if ( menuExist === false ) {
+      else if (nav.classList.contains(activePhotoClass)){
+        // 關閉圖片
+        wholePage.classList.remove('appear');
+        kerwayWork.classList.remove('appear');
+        menuIcon.classList.remove('appear');
+        nav.classList.remove('photoAppear');
+        filter.classList.remove('appear');
+      }
+      else {
         // 開啟 menu
         nav.classList.add(activeMenuClass);
       }

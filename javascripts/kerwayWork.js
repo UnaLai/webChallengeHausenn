@@ -20,7 +20,8 @@ var kerwayPhotoClick = (function (){
       kerwayWork.classList.add('appear');
       menuIcon.classList.add('appear');
       photoContainer.src = this.children[0].getAttribute('src');
-      // console.log(this);
+      nav.classList.add('photoAppear');
+      filter.classList.add('appear');
     });
   }
 
